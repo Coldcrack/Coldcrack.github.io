@@ -768,7 +768,8 @@
           repo: 'Coldcrack.github.io',
           owner: 'Coldcrack',
           admin: ['Coldcrack'],
-          id: location.pathname,
+          id: (location.pathname).split("/").pop().substring(0, 49),
+          language: language
           distractionFreeMode: 'true'
         })
         gitalk.render('gitalk-container')           
