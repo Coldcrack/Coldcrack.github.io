@@ -106,10 +106,10 @@
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/34F8E171-C98C-48A9-AAE0-817E26FC1C5A.png">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/70347A79-6AAA-4723-B6A9-5A5D121D0587.png">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/C179AD24-AA00-43EF-B4B4-009C17BAE1AE.png">
-<meta property="og:image" content="http://yoursite.com/2018/07/24/iOS_Charts/media/15323961651167/EE14FBD9-A01A-43B6-A8D9-85B36AE71547.png">
-<meta property="og:image" content="http://yoursite.com/2018/07/24/iOS_Charts/media/15323961651167/A15C67BA-43A3-4F4E-BF6A-4C81AB525CD0.png">
-<meta property="og:image" content="http://yoursite.com/2018/07/24/iOS_Charts/media/15323961651167/7A5E8A4A-C89D-427C-9982-D5D76ADB229C.png">
-<meta property="og:updated_time" content="2018-07-24T09:31:59.000Z">
+<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/EE14FBD9-A01A-43B6-A8D9-85B36AE71547.png">
+<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/A15C67BA-43A3-4F4E-BF6A-4C81AB525CD0.png">
+<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/7A5E8A4A-C89D-427C-9982-D5D76ADB229C.png">
+<meta property="og:updated_time" content="2018-07-24T09:53:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS Charts 三方框架的集成及使用">
 <meta name="twitter:description" content="iOS Charts 三方框架的集成及使用前言应公司项目需求，需要加一个饼状图，后来在网上搜索了找到了Charts框架的，Star有1w8,阅读了文档后发现这个框架和MPAndroidChart界面一致。 手动导入Charts框架1.点击这里下载工程demo2.新建工程，取名随意，例ChartDemo3.复制Charts-master整个文件到ChartsDemo工程中，如下图： 4.导入Char">
@@ -498,13 +498,13 @@ self.pieChartView.legend.enabled = YES;     //是否显示饼图图例描述
     [self.pieChartView setNeedsDisplay];        //显示数据
     return data;
     }   
-</code></pre><p>运行结果如下图：<br><img src="media/15323961651167/EE14FBD9-A01A-43B6-A8D9-85B36AE71547.png" alt="EE14FBD9-A01A-43B6-A8D9-85B36AE71547-w400"></p>
+</code></pre><p>运行结果如下图：<br><img src="http://oprlyd36a.bkt.clouddn.com/EE14FBD9-A01A-43B6-A8D9-85B36AE71547.png" alt="EE14FBD9-A01A-43B6-A8D9-85B36AE71547-w400"></p>
 <p>如果不需要饼状图的描述, 可以将饼状图的<code>legend.enabled</code>赋值为NO, 将描述去掉即可, 代码如下:</p>
 <pre><code>self.pieChartView.legend.enabled = NO;
-</code></pre><p><img src="media/15323961651167/A15C67BA-43A3-4F4E-BF6A-4C81AB525CD0.png" alt="A15C67BA-43A3-4F4E-BF6A-4C81AB525CD0-w400"></p>
+</code></pre><p><img src="http://oprlyd36a.bkt.clouddn.com/A15C67BA-43A3-4F4E-BF6A-4C81AB525CD0.png" alt="A15C67BA-43A3-4F4E-BF6A-4C81AB525CD0"></p>
 <p>如果不想显示空心圆，可以将饼状图的drawHoleEnabled赋值为NO, 将中间的文本去掉即可, 代码如下:</p>
 <p><code>self.pieChartView.drawHoleEnabled = NO;</code></p>
-<p><img src="media/15323961651167/7A5E8A4A-C89D-427C-9982-D5D76ADB229C.png" alt="7A5E8A4A-C89D-427C-9982-D5D76ADB229-w400"></p>
+<p><img src="http://oprlyd36a.bkt.clouddn.com/7A5E8A4A-C89D-427C-9982-D5D76ADB229C.png" alt="7A5E8A4A-C89D-427C-9982-D5D76ADB229C"></p>
 <p>其它属性已在demo中做了注解，点击<a href="https://github.com/Coldcrack/ChartDemo" target="_blank" rel="noopener">这里</a>下载查看</p>
 
       
