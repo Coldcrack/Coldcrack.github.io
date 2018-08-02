@@ -114,7 +114,7 @@
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/7jzhlebxp7.png">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/r0ukt9znnn.png">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/ubezq8xdjq.png">
-<meta property="og:updated_time" content="2018-08-02T07:54:10.000Z">
+<meta property="og:updated_time" content="2018-08-02T09:21:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac 上远程连接VPS 搭建SS">
 <meta name="twitter:description" content="Mac 上远程连接VPS 搭建SS前言最近在更新github博客时，每次更新博客提交Git都很费时间，最后忍无可忍，想办法做个能加速网络的东东。网上搜罗了一下，发现个神器叫vultr，可以使用Mac基于Vultr搭建ss来加速访问网络。Vultr是一家美国的服务器厂商，这个VPS服务商是按小时收费的。这意味着，架设一台VPS的成本几乎为零。假如你不想用美国的了(这里推荐使用美国的，应为我试了5个I">
@@ -450,7 +450,7 @@
 </code></pre><h3 id="13-安装ss服务端"><a href="#13-安装ss服务端" class="headerlink" title="13). 安装ss服务端"></a>13). 安装ss服务端</h3><p><img src="http://oprlyd36a.bkt.clouddn.com/c4ybczfzu2.png" alt="c4ybczfzu2"><br>代码如下：</p>
 <pre><code>apt-get install shadowsocks
 </code></pre><h3 id="14-稍等片刻，服务器会自动安装好。然后我们输入如下命令，编辑下ss配置文件。"><a href="#14-稍等片刻，服务器会自动安装好。然后我们输入如下命令，编辑下ss配置文件。" class="headerlink" title="14).稍等片刻，服务器会自动安装好。然后我们输入如下命令，编辑下ss配置文件。"></a>14).稍等片刻，服务器会自动安装好。然后我们输入如下命令，编辑下ss配置文件。</h3><p><img src="http://oprlyd36a.bkt.clouddn.com/10qbj9ojnd.png" alt="10qbj9ojnd"><br>代码如下：</p>
-<pre><code>vim/etc/shadowsocks/config.json
+<pre><code>vim /etc/shadowsocks/config.json
 </code></pre><p>看到如下初始配置<br><img src="http://oprlyd36a.bkt.clouddn.com/w1ofmkdo14.png" alt="w1ofmkdo14"></p>
 <p>下面是我推荐的配置：</p>
 <pre><code>{
@@ -467,11 +467,12 @@
 </code></pre><p>来看下mac 下如何在服务器上修改文件<br><img src="http://oprlyd36a.bkt.clouddn.com/lv2wa5t5lb.png" alt="lv2wa5t5lb"></p>
 <p>下面是演示mac vultr搭建ss 的保存</p>
 <p>按了ESC之后，会发现我们退出了插入模式，下面的INSERT消失了<br><img src="http://oprlyd36a.bkt.clouddn.com/7jzhlebxp7.png" alt="7jzhlebxp7"></p>
-<h3 id="15-开启ss服务器进程。"><a href="#15-开启ss服务器进程。" class="headerlink" title="15).开启ss服务器进程。"></a>15).开启ss服务器进程。</h3><p><img src="http://oprlyd36a.bkt.clouddn.com/r0ukt9znnn.png" alt="r0ukt9znnn"></p>
-<h3 id="16-服务器端开始运行了，我们开始下载使用客户端。"><a href="#16-服务器端开始运行了，我们开始下载使用客户端。" class="headerlink" title="16).服务器端开始运行了，我们开始下载使用客户端。"></a>16).服务器端开始运行了，我们开始下载使用客户端。</h3><p>MAC 版连接<br>下载地址： </p>
+<h3 id="15-开启ss服务器进程。"><a href="#15-开启ss服务器进程。" class="headerlink" title="15).开启ss服务器进程。"></a>15).开启ss服务器进程。</h3><p><img src="http://oprlyd36a.bkt.clouddn.com/r0ukt9znnn.png" alt="r0ukt9znnn"><br>代码如下：</p>
+<pre><code>ssserver -c /etc/shadowsocks/config.json start &amp;
+</code></pre><h3 id="16-服务器端开始运行了，我们开始下载使用客户端。"><a href="#16-服务器端开始运行了，我们开始下载使用客户端。" class="headerlink" title="16).服务器端开始运行了，我们开始下载使用客户端。"></a>16).服务器端开始运行了，我们开始下载使用客户端。</h3><p>MAC 版连接<br>下载地址： </p>
 <p><a href="https://link.jianshu.com/?t=http%3A%2F%2Fp1hy9syru.bkt.clouddn.com%2FShadowsocksX-2.6.3.dmg" target="_blank" rel="noopener">ShadowsocksX-2.6.3.dmg</a></p>
 <p>然后 打开ss的 服务器配置，填入相关信息。<br><img src="http://oprlyd36a.bkt.clouddn.com/ubezq8xdjq.png" alt="ubezq8xdjq"></p>
-<h3 id="17-打开浏览器-访问网站，下载你需要的软件，enjoy-yourself"><a href="#17-打开浏览器-访问网站，下载你需要的软件，enjoy-yourself" class="headerlink" title="17).打开浏览器 访问网站，下载你需要的软件，enjoy yourself"></a>17).打开浏览器 访问网站，下载你需要的软件，enjoy yourself</h3><p>原文来自<a href="https://blog.csdn.net/sinat_21785599/article/details/81038070?spm=a2c4e.11153940.blogcont620271.13.597c2097T57xsD" target="_blank" rel="noopener">mac vultr搭建ss教程(2018.7.16更新)</a><br>感谢 亲爱的萧潇 大佬分享的技术博客</p>
+<h3 id="17-打开浏览器-访问网站，下载你需要的软件，enjoy-yourself"><a href="#17-打开浏览器-访问网站，下载你需要的软件，enjoy-yourself" class="headerlink" title="17).打开浏览器 访问网站，下载你需要的软件，enjoy yourself"></a>17).打开浏览器 访问网站，下载你需要的软件，enjoy yourself</h3><p>原文来自<a href="https://blog.csdn.net/sinat_21785599/article/details/81038070?spm=a2c4e.11153940.blogcont620271.13.597c2097T57xsD" target="_blank" rel="noopener">mac vultr搭建ss教程(2018.7.16更新)</a><br>感谢 <a href="https://blog.csdn.net/sinat_21785599" target="_blank" rel="noopener">亲爱的萧潇</a> 大佬分享的技术博客</p>
 
       
     </div>
@@ -522,6 +523,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/02/Mac_VPS_SSH/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -605,7 +610,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
