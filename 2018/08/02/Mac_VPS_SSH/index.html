@@ -88,22 +88,22 @@
 
 
 
-<meta name="description" content="Linux SSH 远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! 刚刚在删掉主机后，重新建了一个主机，发现IP和原来是一样的，然后继续按照原来连接主机的方式，在终端写入代码，报了错误，错误原因如下： WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!  于是就度娘（不得不说搜索引">
+<meta name="description" content="远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! 刚刚在删掉主机后，重新建了一个主机，发现IP和原来是一样的，然后继续按照原来连接主机的方式，在终端写入代码，报了错误，错误原因如下： WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!  于是就度娘（不得不说搜索引擎是个好东西），找了">
 <meta name="keywords" content="Mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="天寒地裂">
 <meta property="og:url" content="http://www.coldcrack.me/2018/08/02/Mac_VPS_SSH/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="Linux SSH 远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! 刚刚在删掉主机后，重新建了一个主机，发现IP和原来是一样的，然后继续按照原来连接主机的方式，在终端写入代码，报了错误，错误原因如下： WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!  于是就度娘（不得不说搜索引">
+<meta property="og:description" content="远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! 刚刚在删掉主机后，重新建了一个主机，发现IP和原来是一样的，然后继续按照原来连接主机的方式，在终端写入代码，报了错误，错误原因如下： WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!  于是就度娘（不得不说搜索引擎是个好东西），找了">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/20160403212616022.png">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/20160403214246747.png">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/1479375182_8683.png">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/1479375192_3660.png">
-<meta property="og:updated_time" content="2018-08-02T09:30:46.000Z">
+<meta property="og:updated_time" content="2018-08-03T02:08:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="天寒地裂">
-<meta name="twitter:description" content="Linux SSH 远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! 刚刚在删掉主机后，重新建了一个主机，发现IP和原来是一样的，然后继续按照原来连接主机的方式，在终端写入代码，报了错误，错误原因如下： WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!  于是就度娘（不得不说搜索引">
+<meta name="twitter:description" content="远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! 刚刚在删掉主机后，重新建了一个主机，发现IP和原来是一样的，然后继续按照原来连接主机的方式，在终端写入代码，报了错误，错误原因如下： WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!  于是就度娘（不得不说搜索引擎是个好东西），找了">
 <meta name="twitter:image" content="http://oprlyd36a.bkt.clouddn.com/20160403212616022.png">
 
 
@@ -420,7 +420,7 @@
       
 
       
-        <h1 id="Linux-SSH-远程登录错误解决办法-WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED"><a href="#Linux-SSH-远程登录错误解决办法-WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED" class="headerlink" title="Linux SSH 远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!"></a>Linux SSH 远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</h1><p> 刚刚在删掉主机后，重新建了一个主机，发现IP和原来是一样的，然后继续按照原来连接主机的方式，在终端写入代码，报了错误，错误原因如下：<br> WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</p>
+        <h1 id="远程登录错误解决办法-WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED"><a href="#远程登录错误解决办法-WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED" class="headerlink" title="远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!"></a>远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</h1><p> 刚刚在删掉主机后，重新建了一个主机，发现IP和原来是一样的，然后继续按照原来连接主机的方式，在终端写入代码，报了错误，错误原因如下：<br> WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</p>
 <p><img src="http://oprlyd36a.bkt.clouddn.com/20160403212616022.png" alt="20160403212616022"></p>
 <p>于是就度娘（不得不说搜索引擎是个好东西），找了好久发现有篇文章里面提到.ssh/known_hosts文件，查看果然有这个文件：<br><img src="http://oprlyd36a.bkt.clouddn.com/20160403214246747.png" alt="20160403214246747"></p>
 <p>就想这文件是个啥东东，待一查，才明白了，原来known_hosts是记录远程主机的公钥的文件，之前重装个系统，而保存的公钥还是未重装系统的系统公钥，在ssh链接的时候首先会验证公钥，如果公钥不对，那么就会报错，</p>
@@ -634,7 +634,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux-SSH-远程登录错误解决办法-WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED"><span class="nav-number">1.</span> <span class="nav-text">Linux SSH 远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#远程登录错误解决办法-WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED"><span class="nav-number">1.</span> <span class="nav-text">远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</span></a></li></ol></div>
             
 
           </div>
