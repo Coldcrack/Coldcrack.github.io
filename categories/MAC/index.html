@@ -91,7 +91,7 @@
 <meta name="description" content="生活就像二进制，不是1就是0。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="天寒地裂">
-<meta property="og:url" content="http://www.coldcrack.me/categories/MAC/index.html">
+<meta property="og:url" content="http://www.coldcrack.me/categories/Mac/index.html">
 <meta property="og:site_name" content="天寒地裂">
 <meta property="og:description" content="生活就像二进制，不是1就是0。">
 <meta property="og:locale" content="zh-Hans">
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://www.coldcrack.me/categories/MAC/"/>
+  <link rel="canonical" href="http://www.coldcrack.me/categories/Mac/"/>
 
 
 
 
 
-  <title>分类: MAC | 天寒地裂</title>
+  <title>分类: Mac | 天寒地裂</title>
   
 
 
@@ -301,7 +301,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>MAC<small>分类</small>
+        <h1>Mac<small>分类</small>
         </h1>
       </div>
 
@@ -313,9 +313,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/07/20/MacOfAllow any sourceConfig/" itemprop="url">
+            <a class="post-title-link" href="/2018/09/11/MoCo_LocalServer/" itemprop="url">
               
-                <span itemprop="name">MAC设置允许任何来源</span>
+                <span itemprop="name">用Moco在Mac上搭建本地服务端</span>
               
             </a>
         
@@ -323,9 +323,65 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-20T10:59:31+08:00"
-              content="2017-07-20" >
-          07-20
+              datetime="2018-09-11T09:21:31+08:00"
+              content="2018-09-11" >
+          09-11
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/08/02/Mac_VPS_SSH/" itemprop="url">
+              
+                <span itemprop="name">远程登录错误WARNING:REMOTE HOST IDENTIFICATION HAS CHANGED!</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-08-02T17:23:56+08:00"
+              content="2018-08-02" >
+          08-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/08/02/Mac_VPS_SS/" itemprop="url">
+              
+                <span itemprop="name">Mac 上远程连接VPS 搭建SS</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-08-02T13:23:12+08:00"
+              content="2018-08-02" >
+          08-02
         </time>
       </div>
 
@@ -390,7 +446,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -749,47 +805,6 @@
               success: function(newcounter) {
                 var $element = $(document.getElementById(url));
                 $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
-         $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
               },
               error: function(newcounter, error) {
                 console.log('Failed to create');
