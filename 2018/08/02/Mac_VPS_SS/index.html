@@ -12,6 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
 
@@ -114,7 +124,7 @@
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/7jzhlebxp7.png">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/r0ukt9znnn.png">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/ubezq8xdjq.png">
-<meta property="og:updated_time" content="2018-08-02T09:21:53.000Z">
+<meta property="og:updated_time" content="2018-09-13T02:43:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac 上远程连接VPS 搭建SS">
 <meta name="twitter:description" content="Mac 上远程连接VPS 搭建SS前言最近在更新github博客时，每次更新博客提交Git都很费时间，最后忍无可忍，想办法做个能加速网络的东东。网上搜罗了一下，发现个神器叫vultr，可以使用Mac基于Vultr搭建ss来加速访问网络。Vultr是一家美国的服务器厂商，这个VPS服务商是按小时收费的。这意味着，架设一台VPS的成本几乎为零。假如你不想用美国的了(这里推荐使用美国的，应为我试了5个I">
@@ -480,6 +490,12 @@
     
     
 
+    <div>
+      
+        
+      
+    </div>
+
     
     
     
@@ -704,20 +720,24 @@
   
 </div>
 
-
+<!-- 
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
   <span class="post-meta-divider">|</span>
 
-
+-->
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
 
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共12.4k字</span>
+</div>
         
 <div class="busuanzi-count">
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>

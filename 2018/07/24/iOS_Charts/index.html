@@ -12,6 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
 
@@ -561,6 +571,12 @@ self.pieChartView.legend.enabled = YES;     //是否显示饼图图例描述
     
     
 
+    <div>
+      
+        
+      
+    </div>
+
     
     
     
@@ -785,20 +801,24 @@ self.pieChartView.legend.enabled = YES;     //是否显示饼图图例描述
   
 </div>
 
-
+<!-- 
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
   <span class="post-meta-divider">|</span>
 
-
+-->
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
 
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共12.4k字</span>
+</div>
         
 <div class="busuanzi-count">
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
