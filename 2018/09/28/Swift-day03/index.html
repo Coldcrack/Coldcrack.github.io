@@ -14,8 +14,8 @@
 
 <script>
     (function(){
-        if('111111'){
-            if (prompt('请输入文章密码') !== '111111'){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
                 alert('密码错误！');
                 history.back();
             }
@@ -87,7 +87,7 @@
 
 
 
-  <meta name="keywords" content="其它," />
+  <meta name="keywords" content="Swift," />
 
 
 
@@ -98,18 +98,20 @@
 
 
 
-<meta name="description" content="第一篇博客我的第一篇博客诞生啦，虽然博客还没有彻底完善，但我会继续改进的！！写下这篇博客，记住这个日子！">
-<meta name="keywords" content="其它">
+<meta name="description" content="Swift学习之路-03swift循环引用的产生闭包对self引用 self对闭包引用 接触循环引用  需要打断链条方法1：OC 的方式细节1 var,weak   只能修饰 var 不能修饰  let&amp;apos;weak&amp;apos; must be a mutable variable, because it may change at runtime weak 可能会被在运行时被修改  -&amp;g">
+<meta name="keywords" content="Swift">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇博客">
-<meta property="og:url" content="http://www.coldcrack.me/2017/04/21/hello-world/index.html">
+<meta property="og:title" content="Swift学习之路-03">
+<meta property="og:url" content="http://www.coldcrack.me/2018/09/28/Swift-day03/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="第一篇博客我的第一篇博客诞生啦，虽然博客还没有彻底完善，但我会继续改进的！！写下这篇博客，记住这个日子！">
+<meta property="og:description" content="Swift学习之路-03swift循环引用的产生闭包对self引用 self对闭包引用 接触循环引用  需要打断链条方法1：OC 的方式细节1 var,weak   只能修饰 var 不能修饰  let&amp;apos;weak&amp;apos; must be a mutable variable, because it may change at runtime weak 可能会被在运行时被修改  -&amp;g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-13T02:43:35.000Z">
+<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/9ABE0801AD055D96BEF933EDD25B1BE5.png">
+<meta property="og:updated_time" content="2018-09-30T02:52:55.851Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一篇博客">
-<meta name="twitter:description" content="第一篇博客我的第一篇博客诞生啦，虽然博客还没有彻底完善，但我会继续改进的！！写下这篇博客，记住这个日子！">
+<meta name="twitter:title" content="Swift学习之路-03">
+<meta name="twitter:description" content="Swift学习之路-03swift循环引用的产生闭包对self引用 self对闭包引用 接触循环引用  需要打断链条方法1：OC 的方式细节1 var,weak   只能修饰 var 不能修饰  let&amp;apos;weak&amp;apos; must be a mutable variable, because it may change at runtime weak 可能会被在运行时被修改  -&amp;g">
+<meta name="twitter:image" content="http://oprlyd36a.bkt.clouddn.com/9ABE0801AD055D96BEF933EDD25B1BE5.png">
 
 
 
@@ -139,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://www.coldcrack.me/2017/04/21/hello-world/"/>
+  <link rel="canonical" href="http://www.coldcrack.me/2018/09/28/Swift-day03/"/>
 
 
 
 
 
-  <title>第一篇博客 | 天寒地裂</title>
+  <title>Swift学习之路-03 | 天寒地裂</title>
   
 
 
@@ -320,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.coldcrack.me/2017/04/21/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://www.coldcrack.me/2018/09/28/Swift-day03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="天寒地裂">
@@ -337,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第一篇博客</h1>
+          <h1 class="post-title" itemprop="name headline">Swift学习之路-03</h1>
         
 
         <div class="post-meta">
@@ -349,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-21T10:59:31+08:00">
-                2017-04-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-28T20:12:23+08:00">
+                2018-09-28
               </time>
             
 
@@ -372,8 +374,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/其它/" itemprop="url" rel="index">
-                    <span itemprop="name">其它</span>
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
                   </a>
                 </span>
 
@@ -389,7 +391,7 @@
 
           
           
-             <span id="/2017/04/21/hello-world/" class="leancloud_visitors" data-flag-title="第一篇博客">
+             <span id="/2018/09/28/Swift-day03/" class="leancloud_visitors" data-flag-title="Swift学习之路-03">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -425,7 +427,38 @@
       
 
       
-        <h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><p>我的第一篇博客诞生啦，虽然博客还没有彻底完善，但我会继续改进的！！写下这篇博客，记住这个日子！</p>
+        <h1 id="Swift学习之路-03"><a href="#Swift学习之路-03" class="headerlink" title="Swift学习之路-03"></a>Swift学习之路-03</h1><h2 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h2><h3 id="循环引用的产生"><a href="#循环引用的产生" class="headerlink" title="循环引用的产生"></a>循环引用的产生</h3><p>闭包对self引用 self对闭包引用</p>
+<h3 id="接触循环引用-需要打断链条"><a href="#接触循环引用-需要打断链条" class="headerlink" title="接触循环引用  需要打断链条"></a>接触循环引用  需要打断链条</h3><h4 id="方法1：OC-的方式"><a href="#方法1：OC-的方式" class="headerlink" title="方法1：OC 的方式"></a>方法1：OC 的方式</h4><h5 id="细节1-var-weak-只能修饰-var-不能修饰-let"><a href="#细节1-var-weak-只能修饰-var-不能修饰-let" class="headerlink" title="细节1 var,weak   只能修饰 var 不能修饰  let"></a>细节1 var,weak   只能修饰 var 不能修饰  let</h5><pre><code>&apos;weak&apos; must be a mutable variable, because it may change at runtime
+</code></pre><p>weak 可能会被在运行时被修改  -&gt;指向的对象一旦被释放  会被自动设置为 nil  </p>
+<h5 id="细节2"><a href="#细节2" class="headerlink" title="细节2"></a>细节2</h5><p>解包有两种方式的解包<br>？ 可选解包 — 如果 self  已经被释放，不会向对象发送 getter 的消息，更加安全<br>！ 强行解包  — 如果 self 已经被释放，强行解包会导致崩溃<br> weakSelf?.view - 只是单纯的发送消息，没有计算<br> 强行解包,应为需要计算，可选项不能直接参与到计算！</p>
+<h4 id="方法2-Swift-的推荐方法"><a href="#方法2-Swift-的推荐方法" class="headerlink" title="方法2 - Swift 的推荐方法"></a>方法2 - Swift 的推荐方法</h4><p>[weak self] 表示{}的所有 self 都是弱引用 ，需要注意解包</p>
+<pre><code>loadData {
+    [weak self] in
+    print(self?.view as Any)
+}
+</code></pre><h4 id="方法3-Swift-的另一个用法，知道就好"><a href="#方法3-Swift-的另一个用法，知道就好" class="headerlink" title="方法3 - Swift 的另一个用法，知道就好"></a>方法3 - Swift 的另一个用法，知道就好</h4><p>[unowned self] 表示 {} 中的所有 self 都是 assign 的 不会强引用，但是 ，如果对象释放，指针地址不会变化<br>如果对象被释放，继续调用，就会出现野指针的问题，奔溃信息如下</p>
+<pre><code>   loadData {
+      [unowned self] in
+      print(self.view)
+}
+</code></pre><h4 id="奔溃信息"><a href="#奔溃信息" class="headerlink" title="奔溃信息"></a>奔溃信息</h4><pre><code>Thread 1: Fatal error: Unexpectedly found nil
+</code></pre><h3 id="OC解决循环引用的两种方法"><a href="#OC解决循环引用的两种方法" class="headerlink" title="OC解决循环引用的两种方法"></a>OC解决循环引用的两种方法</h3><p>解除循环引用1: __weak</p>
+<pre><code>//    __weak typeof(self) weakSelf = self;
+
+//    [self loadData:^{
+//        NSLog(@&quot;%@&quot;,weakSelf.view);
+//    }];
+</code></pre><p>解除引用2: __unsafe_unretained<br>    // 高级iOS 如果需要自行管理e内存 可以考虑使用 但是不建议使用</p>
+<pre><code>//    EXC_BAD_ACCESS (code=EXC_I386_GPFLT) 
+</code></pre><p>坏内存访问，野指针<br>__unsafe_unretained 同样是 assign 的引用（MRC 没有weak）<br>在 MRC中如果要引用对象都是使用 assign ,不会增加引用计数，但是一旦对象被释放，地址不会改变，继续访问，出现野指针<br>在ARC weak 本质上是一个u观察者模式，一旦发现对象被释放，会自动将地址设置为nil 更加安全<br>效率: weak 的效率会略微差一些！</p>
+<pre><code>    __unsafe_unretained typeof (self) weakSelf = self;
+[self loadData:^{
+    NSLog(@&quot;%@&quot;,weakSelf.view);
+}];
+</code></pre><h4 id="崩溃信息"><a href="#崩溃信息" class="headerlink" title="崩溃信息"></a>崩溃信息</h4><pre><code>EXC_BAD_ACCESS (code=EXC_I386_GPFLT)
+</code></pre><p>访问失败，就是野指针</p>
+<h4 id="弱引用和强引用"><a href="#弱引用和强引用" class="headerlink" title="弱引用和强引用"></a>弱引用和强引用</h4><p><img src="http://oprlyd36a.bkt.clouddn.com/9ABE0801AD055D96BEF933EDD25B1BE5.png" alt="9ABE0801AD055D96BEF933EDD25B1BE5"></p>
+<p>个人认为是nil<br>正确答案是hello</p>
 
       
     </div>
@@ -460,7 +493,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/其它/" rel="tag"><i class="fa fa-tag"></i> 其它</a>
+            <a href="/tags/Swift/" rel="tag"><i class="fa fa-tag"></i> Swift</a>
           
         </div>
       
@@ -473,14 +506,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/09/26/Swift-day02/" rel="next" title="Swift学习之路-day02">
+                <i class="fa fa-chevron-left"></i> Swift学习之路-day02
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/20/MacOfAllow any sourceConfig/" rel="prev" title="MAC设置允许任何来源">
-                MAC设置允许任何来源 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/29/Swift-day04/" rel="prev" title="Swift学习之路-04">
+                Swift学习之路-04 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -630,7 +667,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一篇博客"><span class="nav-number">1.</span> <span class="nav-text">第一篇博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Swift学习之路-03"><span class="nav-number">1.</span> <span class="nav-text">Swift学习之路-03</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#swift"><span class="nav-number">1.1.</span> <span class="nav-text">swift</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#循环引用的产生"><span class="nav-number">1.1.1.</span> <span class="nav-text">循环引用的产生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接触循环引用-需要打断链条"><span class="nav-number">1.1.2.</span> <span class="nav-text">接触循环引用  需要打断链条</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法1：OC-的方式"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">方法1：OC 的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#细节1-var-weak-只能修饰-var-不能修饰-let"><span class="nav-number">1.1.2.1.1.</span> <span class="nav-text">细节1 var,weak   只能修饰 var 不能修饰  let</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#细节2"><span class="nav-number">1.1.2.1.2.</span> <span class="nav-text">细节2</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法2-Swift-的推荐方法"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">方法2 - Swift 的推荐方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法3-Swift-的另一个用法，知道就好"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">方法3 - Swift 的另一个用法，知道就好</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#奔溃信息"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">奔溃信息</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OC解决循环引用的两种方法"><span class="nav-number">1.1.3.</span> <span class="nav-text">OC解决循环引用的两种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#崩溃信息"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">崩溃信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#弱引用和强引用"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">弱引用和强引用</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
