@@ -87,7 +87,7 @@
 
 
 
-  <meta name="keywords" content="Mac," />
+  <meta name="keywords" content="Swift," />
 
 
 
@@ -98,20 +98,22 @@
 
 
 
-<meta name="description" content="用Moco在Mac上搭建本地服务端前言这段时间开发经常遇到这样的问题，UI设计稿出完了，但是服务端后台那边还在做，接口还在写，但我们又不想写死数据，希望能过通过请求接口获取数据来搭建界面。那该怎么办呢？这样就要用到Moco了，我们可以自己在本地搭建一个服务器写好想要数据，然后我们通过接口get或post请求将数据拿到项目中去使用。 准备工作在Mac上配置JDK环境，去官网直接下个JDK安装包即可点">
-<meta name="keywords" content="Mac">
+<meta name="description" content="逃逸闭包（@escaping）和非逃逸闭包今天学习GCD时，用闭包写了个函数出现了这些问题，如图问题报错： 1.Function types cannot have argument labels; use &amp;apos;_&amp;apos; before &amp;apos;result&amp;apos; 2.Closure use of non-escaping parameter &amp;apos;comletion&amp;">
+<meta name="keywords" content="Swift">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用Moco在Mac上搭建本地服务端">
-<meta property="og:url" content="http://www.coldcrack.me/2018/09/11/MoCo_LocalServer/index.html">
+<meta property="og:title" content="逃逸闭包（@escaping）和非逃逸闭包">
+<meta property="og:url" content="http://www.coldcrack.me/2018/09/30/Closure&@escaping/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="用Moco在Mac上搭建本地服务端前言这段时间开发经常遇到这样的问题，UI设计稿出完了，但是服务端后台那边还在做，接口还在写，但我们又不想写死数据，希望能过通过请求接口获取数据来搭建界面。那该怎么办呢？这样就要用到Moco了，我们可以自己在本地搭建一个服务器写好想要数据，然后我们通过接口get或post请求将数据拿到项目中去使用。 准备工作在Mac上配置JDK环境，去官网直接下个JDK安装包即可点">
+<meta property="og:description" content="逃逸闭包（@escaping）和非逃逸闭包今天学习GCD时，用闭包写了个函数出现了这些问题，如图问题报错： 1.Function types cannot have argument labels; use &amp;apos;_&amp;apos; before &amp;apos;result&amp;apos; 2.Closure use of non-escaping parameter &amp;apos;comletion&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/3103049-ffb2b311f4e5399e.png">
-<meta property="og:updated_time" content="2018-09-11T01:21:33.000Z">
+<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png">
+<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/1411204-b56b97c93063dbaa.png">
+<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/1411204-065fc11c7ec14729.png">
+<meta property="og:updated_time" content="2018-09-30T07:28:25.249Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用Moco在Mac上搭建本地服务端">
-<meta name="twitter:description" content="用Moco在Mac上搭建本地服务端前言这段时间开发经常遇到这样的问题，UI设计稿出完了，但是服务端后台那边还在做，接口还在写，但我们又不想写死数据，希望能过通过请求接口获取数据来搭建界面。那该怎么办呢？这样就要用到Moco了，我们可以自己在本地搭建一个服务器写好想要数据，然后我们通过接口get或post请求将数据拿到项目中去使用。 准备工作在Mac上配置JDK环境，去官网直接下个JDK安装包即可点">
-<meta name="twitter:image" content="http://oprlyd36a.bkt.clouddn.com/3103049-ffb2b311f4e5399e.png">
+<meta name="twitter:title" content="逃逸闭包（@escaping）和非逃逸闭包">
+<meta name="twitter:description" content="逃逸闭包（@escaping）和非逃逸闭包今天学习GCD时，用闭包写了个函数出现了这些问题，如图问题报错： 1.Function types cannot have argument labels; use &amp;apos;_&amp;apos; before &amp;apos;result&amp;apos; 2.Closure use of non-escaping parameter &amp;apos;comletion&amp;">
+<meta name="twitter:image" content="http://oprlyd36a.bkt.clouddn.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png">
 
 
 
@@ -141,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://www.coldcrack.me/2018/09/11/MoCo_LocalServer/"/>
+  <link rel="canonical" href="http://www.coldcrack.me/2018/09/30/Closure&@escaping/"/>
 
 
 
 
 
-  <title>用Moco在Mac上搭建本地服务端 | 天寒地裂</title>
+  <title>逃逸闭包（@escaping）和非逃逸闭包 | 天寒地裂</title>
   
 
 
@@ -322,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.coldcrack.me/2018/09/11/MoCo_LocalServer/">
+    <link itemprop="mainEntityOfPage" href="http://www.coldcrack.me/2018/09/30/Closure&@escaping/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="天寒地裂">
@@ -339,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用Moco在Mac上搭建本地服务端</h1>
+          <h1 class="post-title" itemprop="name headline">逃逸闭包（@escaping）和非逃逸闭包</h1>
         
 
         <div class="post-meta">
@@ -351,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T09:21:31+08:00">
-                2018-09-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-30T12:59:31+08:00">
+                2018-09-30
               </time>
             
 
@@ -374,8 +376,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mac/" itemprop="url" rel="index">
-                    <span itemprop="name">Mac</span>
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
                   </a>
                 </span>
 
@@ -391,7 +393,7 @@
 
           
           
-             <span id="/2018/09/11/MoCo_LocalServer/" class="leancloud_visitors" data-flag-title="用Moco在Mac上搭建本地服务端">
+             <span id="/2018/09/30/Closure&@escaping/" class="leancloud_visitors" data-flag-title="逃逸闭包（@escaping）和非逃逸闭包">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -427,106 +429,25 @@
       
 
       
-        <h1 id="用Moco在Mac上搭建本地服务端"><a href="#用Moco在Mac上搭建本地服务端" class="headerlink" title="用Moco在Mac上搭建本地服务端"></a>用Moco在Mac上搭建本地服务端</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这段时间开发经常遇到这样的问题，UI设计稿出完了，但是服务端后台那边还在做，接口还在写，但我们又不想写死数据，希望能过通过请求接口获取数据来搭建界面。那该怎么办呢？<br>这样就要用到Moco了，我们可以自己在本地搭建一个服务器写好想要数据，然后我们通过接口get或post请求将数据拿到项目中去使用。</p>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>在Mac上配置JDK环境，去<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">官网</a>直接下个JDK安装包即可<br>点击链接下载jar包<a href="https://repo1.maven.org/maven2/com/github/dreamhead/moco-runner/0.11.0/moco-runner-0.11.0-standalone.jar" target="_blank" rel="noopener">moco服务端</a><br>新建文件夹（命名任意）,新建Config.json文件，这个文件用于配置api，里面引用需要配置到服务器的请求文件（后缀必须用.json，并且打开方式建议使用SublimeText打开编辑）,新建文件也可以使用使用SublimeText新建。<br><img src="http://oprlyd36a.bkt.clouddn.com/3103049-ffb2b311f4e5399e.png" alt="3103049-ffb2b311f4e5399e"></p>
-<h4 id="全局文件配置"><a href="#全局文件配置" class="headerlink" title="全局文件配置"></a>全局文件配置</h4><p>Moco支持在全局的配置文件中引入其他配置文件，这样就可以分服务定义配置文件，便于管理。在全局文件中引入即可。<br>1.在localServer文件夹中新建一个login的文件夹；<br>2.在login文件夹中新建login_request.json文件以及login_response.json文件；<br>在Config.json中写入</p>
-<pre><code>[
-   {
-   &quot;include&quot; : &quot;login/login_ request.json&quot;
-   }
- ]
-</code></pre><p>include是导入文件,我们新建的其它配置文件，都在Config导入进入</p>
-<h4 id="其他配置文件"><a href="#其他配置文件" class="headerlink" title="其他配置文件"></a>其他配置文件</h4><p>在login_ request.json中写入</p>
-<pre><code> [
-{
- &quot;request&quot; :
- {
-   &quot;uri&quot; : &quot;/assetApp/login&quot;,
-   &quot;method&quot; : &quot;get&quot;,
-   &quot;queries&quot; :
-     {
-      &quot;username&quot; : &quot;sa&quot;,
-      &quot;password&quot; : &quot;sa&quot;
-     }
- },
- &quot;response&quot; :
- {
-   &quot;file&quot; : &quot;./login/login_response.json&quot;
- }
-}
-]
-</code></pre><p>在login_response.json中写入</p>
-<pre><code>[
-{
- &quot;status&quot;: &quot;OK&quot;,
- &quot;code&quot;: 200
-}
-]
-</code></pre><h3 id="开启服务端"><a href="#开启服务端" class="headerlink" title="开启服务端"></a>开启服务端</h3><p>打开终端，输入以下内容：</p>
-<pre><code>cd &lt;Config.json当前目录&gt;
-</code></pre><p>回车后再输入以下内容：</p>
-<pre><code>//8080是端口号，可以是任意数字
-单个配置如下：java -jar moco-runner-0.10.2-standalone.jar start -p 8080 -c Config.json
-全局配置如下：java -jar moco-runner-0.10.2-standalone.jar start -p 8080 -g Config.json
-</code></pre><p>[注意] 在全局配置下时，需要通过参数 -g 在加载全局配置文件，使用的不是-c了，否则配置文件解析会报错。<br>出现如下内容表示运行成功</p>
-<pre><code>[main] INFO  Server is started at 8080
-[main] INFO  Shutdown port is 51372
-</code></pre><p>在浏览器里输入<a href="http://localhost:8080/assetApp/login?username=sa&amp;password=sa回车后结果如下" target="_blank" rel="noopener">http://localhost:8080/assetApp/login?username=sa&amp;password=sa回车后结果如下</a>:</p>
-<pre><code>[
-    {
-     &quot;status&quot;: &quot;OK&quot;,
-     &quot;code&quot;: 200
-    }
-    ]
-</code></pre><p>说明模拟服务器是可以正常使用的。到此服务器就搭建完毕了。是不是很简单！</p>
-<p>下面是POST和GET两种常用的网络数据请求的配置</p>
-<h4 id="request请求"><a href="#request请求" class="headerlink" title="request请求"></a>request请求</h4><p>有14个固定的属性: <code>method</code>, <code>headers</code>, <code>json</code>, <code>factory</code>, <code>uri</code>, <code>text</code>, <code>cookies</code>, <code>xpaths</code>,<code>json_paths</code>, <code>version</code>, <code>file</code>,<code>queries</code>,<code>path_resource</code>,<code>forms</code>。一定要遵循这些方法。 常用的<code>method(请求方式)</code>, <code>headers(heads参数)</code>,<code>uri(url地址)</code>,<code>file(指定调用的请求文件)</code>, <code>queries(请求带参)</code>，<code>forms(表单内容)</code>。</p>
-<h4 id="response响应"><a href="#response响应" class="headerlink" title="response响应"></a>response响应</h4><p>有12个固定属性：<code>status</code>, <code>attachment</code>, <code>headers</code>, <code>version</code>, <code>factory</code>, <code>file</code>,<code>text</code>, <code>proxy</code>, <code>cookies</code>,<code>json</code>, <code>latency</code>, <code>path_resource</code>。<br>在本篇文章中用到<code>file</code>,<code>text</code>。</p>
-<h5 id="Get-方法-不带参数"><a href="#Get-方法-不带参数" class="headerlink" title="Get 方法 不带参数"></a>Get 方法 不带参数</h5><pre><code>[
- {
-     &quot;request&quot;: {
-        &quot;method&quot; : &quot;get&quot;,
-        &quot;uri&quot;: &quot;/getMethod&quot;
-     },
-    &quot;response&quot;: {
-        &quot;text&quot;: &quot;This is a Get Method!&quot;
-     }
- }
-]
-</code></pre><p>浏览器输入链接<a href="http://localhost:8080/getMethod" target="_blank" rel="noopener">http://localhost:8080/getMethod</a></p>
-<h5 id="Get方法-带参数"><a href="#Get方法-带参数" class="headerlink" title="Get方法 带参数"></a>Get方法 带参数</h5><p>默认的请求方式是Get，你可以不用写method。</p>
-<pre><code>{
-     &quot;request&quot;: {
-        &quot;uri&quot;: &quot;/getMethodWithParams&quot;,
-        &quot;queries&quot;: {
-             &quot;param1&quot;: &quot;1&quot;,
-             &quot;param2&quot;: &quot;2&quot;
-        }
-     },
-    &quot;response&quot;: {
-        &quot;text&quot;: &quot;This is a method with params!&quot;
-     }
- }
-</code></pre><p>浏览器输入链接<a href="http://localhost:8080/getMethodWithParams?param1=1&amp;param2=2" target="_blank" rel="noopener">http://localhost:8080/getMethodWithParams?param1=1&amp;param2=2</a></p>
-<h5 id="Post-方法"><a href="#Post-方法" class="headerlink" title="Post 方法"></a>Post 方法</h5><p>写一个复杂的带有headers,body的Post 请求方法：</p>
-<pre><code>{
-     &quot;request&quot;: {
-        &quot;method&quot; : &quot;post&quot;,
-        &quot;uri&quot;: &quot;/postMethod&quot;,
-        &quot;headers&quot; : {
-             &quot;content-type&quot; : &quot;application/json&quot;,
-             &quot;sessionid&quot;: &quot;e566288ba77de98d&quot;
-         },
-        &quot;forms&quot; :{
-          &quot;name&quot; : &quot;admin&quot;,
-          &quot;password&quot; : &quot;123456&quot;
-        }
-     },
-    &quot;response&quot;: {
-        &quot;text&quot;: &quot;This is a POST Method!&quot;
-     }
- }
-</code></pre><p>参考 <a href="https://github.com/dreamhead/moco/blob/677f6fda6184b8a46fb7bfbdb339453571adac87/moco-doc/global-settings.md" target="_blank" rel="noopener">Global Settings</a></p>
+        <h1 id="逃逸闭包（-escaping）和非逃逸闭包"><a href="#逃逸闭包（-escaping）和非逃逸闭包" class="headerlink" title="逃逸闭包（@escaping）和非逃逸闭包"></a>逃逸闭包（@escaping）和非逃逸闭包</h1><p>今天学习GCD时，用闭包写了个函数出现了这些问题，如图<br><img src="http://oprlyd36a.bkt.clouddn.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png" alt="6455CAF8-20E8-4F70-B585-1CF2840BD5F5"><br>问题报错：</p>
+<pre><code>1.Function types cannot have argument labels; use &apos;_&apos; before &apos;result&apos;
+2.Closure use of non-escaping parameter &apos;comletion&apos; may allow it to escape
+3.Closure use of non-escaping parameter &apos;comletion&apos; may allow it to escape
+4.Parameter &apos;comletion&apos; is implicitly non-escaping
+5.Extraneous argument label &apos;result:&apos; in call
+</code></pre><p>1.函数类型前不能有参数标签，需要用‘_’替换<br>2.闭包使用了非逃逸参数‘comletion’,需要让它逃逸<br>3.闭包使用了非逃逸参数‘comletion’,需要让它逃逸<br>4.参数‘completion’ 是隐式的非逃逸闭包<br>5.Extraneous argument label ‘result:’ in call</p>
+<p>虽然我们可以根据这些提示，来修改错误代码</p>
+<h3 id="非逃逸闭包"><a href="#非逃逸闭包" class="headerlink" title="非逃逸闭包"></a>非逃逸闭包</h3><p>非逃逸闭包:当函数执行过程中,执行的函数内部的闭包,叫做非逃逸闭包 @noescape<br>非逃逸闭包的生命周期：</p>
+<p>把闭包作为参数传递给函数。<br>函数中运行该闭包。<br>退出函数。<br><img src="http://oprlyd36a.bkt.clouddn.com/1411204-b56b97c93063dbaa.png" alt="1411204-b56b97c93063dbaa"></p>
+<p>如图，函数在运行完后，闭包并没有逃逸，而是被限制在函数中。</p>
+<h3 id="逃逸闭包"><a href="#逃逸闭包" class="headerlink" title="逃逸闭包"></a>逃逸闭包</h3><p>逃逸闭包:当函数执行结束后,才去调用函数内部的闭包,叫做逃逸闭包<br>逃逸闭包的生命周期：<br>逃逸闭包恰恰与非逃逸闭包相反，其生命周期长于相关函数，当函数退出的时候，逃逸闭包的引用仍然被其他对象持有，不会在相关函数结束后释放。(有点像OC中的strong哈)</p>
+<p><img src="http://oprlyd36a.bkt.clouddn.com/1411204-065fc11c7ec14729.png" alt="1411204-065fc11c7ec14729"></p>
+<p>如上图所示，当函数结束的时候，闭包依然会在外面的世界里逍遥快活，对于内存管理来说这可不是好现象。</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>而在3.0中，闭包参数默认是非逃逸类型，如果需要逃逸类型的闭包，记得使用关键字<code>@escaping</code>。</p>
+<p>而对于非逃逸型闭包，由于其生命周期确定短于相关函数，编译器可以据此做性能优化。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>要谨慎使用@escaping(逃逸闭包)，除非明确知道要使用它做什么。</p>
+<p>下面是使用逃逸闭包的2个场景：</p>
+<p>异步调用: 如果需要调度队列中异步调用闭包， 这个队列会持有闭包的引用，至于什么时候调用闭包，或闭包什么时候运行结束都是不可预知的。<br>存储: 需要存储闭包作为属性，全局变量或其他类型做稍后使用。</p>
 
       
     </div>
@@ -561,7 +482,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Mac/" rel="tag"><i class="fa fa-tag"></i> Mac</a>
+            <a href="/tags/Swift/" rel="tag"><i class="fa fa-tag"></i> Swift</a>
           
         </div>
       
@@ -574,8 +495,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/17/iOS_DocumentIndex/" rel="next" title="iOS 通过iTunes共享文件获取手机沙盒Document目录">
-                <i class="fa fa-chevron-left"></i> iOS 通过iTunes共享文件获取手机沙盒Document目录
+              <a href="/2018/09/29/Swift-day04/" rel="next" title="Swift学习之路-04">
+                <i class="fa fa-chevron-left"></i> Swift学习之路-04
               </a>
             
           </div>
@@ -583,10 +504,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/14/Hexo_ category_case/" rel="prev" title="Hexo 部署到 Github Pages 文件夹大小写问题">
-                Hexo 部署到 Github Pages 文件夹大小写问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -735,7 +652,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#用Moco在Mac上搭建本地服务端"><span class="nav-number">1.</span> <span class="nav-text">用Moco在Mac上搭建本地服务端</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">1.1.1.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#全局文件配置"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">全局文件配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他配置文件"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">其他配置文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启服务端"><span class="nav-number">1.1.2.</span> <span class="nav-text">开启服务端</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#request请求"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">request请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#response响应"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">response响应</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Get-方法-不带参数"><span class="nav-number">1.1.2.2.1.</span> <span class="nav-text">Get 方法 不带参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Get方法-带参数"><span class="nav-number">1.1.2.2.2.</span> <span class="nav-text">Get方法 带参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Post-方法"><span class="nav-number">1.1.2.2.3.</span> <span class="nav-text">Post 方法</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#逃逸闭包（-escaping）和非逃逸闭包"><span class="nav-number">1.</span> <span class="nav-text">逃逸闭包（@escaping）和非逃逸闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非逃逸闭包"><span class="nav-number">1.0.1.</span> <span class="nav-text">非逃逸闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逃逸闭包"><span class="nav-number">1.0.2.</span> <span class="nav-text">逃逸闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">1.0.3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.0.4.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
