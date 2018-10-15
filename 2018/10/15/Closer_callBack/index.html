@@ -87,7 +87,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Swift," />
 
 
 
@@ -98,16 +98,18 @@
 
 
 
-<meta name="description" content="生活就像二进制，不是1就是0。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="天寒地裂">
-<meta property="og:url" content="http://www.coldcrack.me/tags/其它/index.html">
+<meta name="description" content="闭包传值swift开发中常常遇到控制之间传值的问题,在oc中我们可以用通知、代理、block来传值。在oc的block传值很方便，缺点就是只能回调传值，如果要传多个控制器只能用通知了。而在swift中我们也可以用通知、代理来传值,但那样太麻烦了，swift有个很方便的回调叫闭包(closure)。swift闭包和oc的block很类似，它可以做方法的回调也可以用来做两个界面之间的传值，也可以叫两个">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="闭包传值">
+<meta property="og:url" content="http://www.coldcrack.me/2018/10/15/Closer_callBack/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="生活就像二进制，不是1就是0。">
+<meta property="og:description" content="闭包传值swift开发中常常遇到控制之间传值的问题,在oc中我们可以用通知、代理、block来传值。在oc的block传值很方便，缺点就是只能回调传值，如果要传多个控制器只能用通知了。而在swift中我们也可以用通知、代理来传值,但那样太麻烦了，swift有个很方便的回调叫闭包(closure)。swift闭包和oc的block很类似，它可以做方法的回调也可以用来做两个界面之间的传值，也可以叫两个">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-15T01:35:13.253Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天寒地裂">
-<meta name="twitter:description" content="生活就像二进制，不是1就是0。">
+<meta name="twitter:title" content="闭包传值">
+<meta name="twitter:description" content="闭包传值swift开发中常常遇到控制之间传值的问题,在oc中我们可以用通知、代理、block来传值。在oc的block传值很方便，缺点就是只能回调传值，如果要传多个控制器只能用通知了。而在swift中我们也可以用通知、代理来传值,但那样太麻烦了，swift有个很方便的回调叫闭包(closure)。swift闭包和oc的block很类似，它可以做方法的回调也可以用来做两个界面之间的传值，也可以叫两个">
 
 
 
@@ -137,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://www.coldcrack.me/tags/其它/"/>
+  <link rel="canonical" href="http://www.coldcrack.me/2018/10/15/Closer_callBack/"/>
 
 
 
 
 
-  <title>标签: 其它 | 天寒地裂</title>
+  <title>闭包传值 | 天寒地裂</title>
   
 
 
@@ -162,7 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -304,166 +306,257 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>其它<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.coldcrack.me/2018/10/15/Closer_callBack/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="天寒地裂">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="天寒地裂">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/07/18/aliICloud-domain/" itemprop="url">
-              
-                <span itemprop="name">使用阿里云购买域名及域名解析</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">闭包传值</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-18T22:59:31+08:00"
-              content="2018-07-18" >
-          07-18
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-15T10:35:44+08:00">
+                2018-10-15
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/10/15/Closer_callBack/" class="leancloud_visitors" data-flag-title="闭包传值">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/17/macUploadGitHub/" itemprop="url">
-              
-                <span itemprop="name">mac系统下上传代码至GitHub</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-17T22:27:31+08:00"
-              content="2018-07-17" >
-          07-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
+        <h1 id="闭包传值"><a href="#闭包传值" class="headerlink" title="闭包传值"></a>闭包传值</h1><p>swift开发中常常遇到控制之间传值的问题,在oc中我们可以用通知、代理、block来传值。在oc的block传值很方便，缺点就是只能回调传值，如果要传多个控制器只能用通知了。<br>而在swift中我们也可以用通知、代理来传值,但那样太麻烦了，swift有个很方便的回调叫闭包(closure)。<br>swift闭包和oc的block很类似，它可以做方法的回调也可以用来做两个界面之间的传值，也可以叫两个界面的反向传值（既回调）。</p>
+<h2 id="两个界面的传值"><a href="#两个界面的传值" class="headerlink" title="两个界面的传值"></a>两个界面的传值</h2><p>我们要实现点击第二个界面后，关掉第二个界面，并且传值给第一个界面</p>
+<p> 首先在第二个界面声明闭包进行操作</p>
+<pre><code>class NewViewController: UIViewController {
+    //声明闭包
+    typealias lewisCloser = (_ paramOne : String? ) -&gt; ()
+    //定义个变量 类型就是上面声明的闭包
+    var customeCloser: lewisCloser?
+    override func touchesBegan(_ touches: Set&lt;UITouch&gt;, with event: UIEvent?) {
+        if(customeCloser != nil) {
+            customeCloser!(&quot;要发给第一个界面的值&quot;)
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+}
+</code></pre><p> 在第一个界面实现闭包，回调值</p>
+<pre><code>let vc = NewViewController()
+//实现闭包
+vc.customeCloser = {(cusValue) -&gt; () in
+      //cusValue就是传过来的值
+      print(&quot;第二个界面:\(cusValue!)&quot;)
+ }
+self.present(vc, animated: true, completion: nil)
+</code></pre><p>控制器获取tableView的Cell中的collection的item点击路径<br> tableView的Cell的闭包操作</p>
+<pre><code>    class TableViewCell: UITableViewCell {
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/26/MarkDownBlog/" itemprop="url">
-              
-                <span itemprop="name">MWeb+七牛云储存制作MarkDown文章</span>
-              
-            </a>
-        
-      </h2>
+    //声明闭包
+    typealias clickCloser = (_ cellPath:IndexPath) -&gt; ()
+    //定义个变量 类型就是上面声明的闭包
+    var customeCloser: clickCloser?
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-26T10:59:31+08:00"
-              content="2018-06-26" >
-          06-26
-        </time>
-      </div>
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
 
-    </header>
-  </article>
+        // Configure the view for the selected state
+    }
+}
 
+    extension TableViewCell: UICollectionViewDelegate {
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/11/github&gitee&SSH/" itemprop="url">
-              
-                <span itemprop="name">github和码云的SSH公钥</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-11T10:59:31+08:00"
-              content="2018-02-11" >
-          02-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/21/hello-world/" itemprop="url">
-              
-                <span itemprop="name">第一篇博客</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-21T10:59:31+08:00"
-              content="2017-04-21" >
-          04-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+            if(customeCloser != nil) {
+                customeCloser!(indexPath)
+        }
+    }
+}
+</code></pre><p>控制器取得回调值<br>    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {</p>
 
       
     </div>
+    
+    
+    
 
+    <div>
+      
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    </div>
+    
+
+    
+
+    
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Swift/" rel="tag"><i class="fa fa-tag"></i> Swift</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/30/Closure&@escaping/" rel="next" title="逃逸闭包（@escaping）和非逃逸闭包">
+                <i class="fa fa-chevron-left"></i> 逃逸闭包（@escaping）和非逃逸闭包
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -471,6 +564,13 @@
 
 
           
+
+  
+    <div id="gitalk-container"></div>
+    
+  
+
+
 
         </div>
         
@@ -491,8 +591,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -566,6 +675,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#闭包传值"><span class="nav-number">1.</span> <span class="nav-text">闭包传值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#两个界面的传值"><span class="nav-number">1.1.</span> <span class="nav-text">两个界面的传值</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -730,6 +855,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -770,6 +899,21 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '1d6f1a0b07f71d13c86c',
+          clientSecret: 'e42e11321fee0b0e527c79195d7e63ff7e8af241',
+          repo: 'Coldcrack.github.io',
+          owner: 'Coldcrack',
+          admin: ['Coldcrack'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
