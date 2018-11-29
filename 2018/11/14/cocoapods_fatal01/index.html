@@ -87,7 +87,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="CocoaPods," />
 
 
 
@@ -98,16 +98,20 @@
 
 
 
-<meta name="description" content="生活就像二进制，不是1就是0。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="天寒地裂">
-<meta property="og:url" content="http://www.coldcrack.me/archives/page/3/index.html">
+<meta name="description" content="使用cocoapods时pod install失败，报错fatal:Not a git repository今天使用cocoapods时发现出现了这个问题，网上搜罗了一下方法，但并不管用，只能到系统目录下吧cocoapods删除重来了。打开finder，快捷键shift+command+G打开快速查找输入~,找到隐藏文件.cocoapods，把里面的子文件都删除了，然后回到项目工程，使用终端在po">
+<meta name="keywords" content="CocoaPods">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用cocoapods时pod install失败，报错fatal:Not a git repository">
+<meta property="og:url" content="http://www.coldcrack.me/2018/11/14/cocoapods_fatal01/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="生活就像二进制，不是1就是0。">
+<meta property="og:description" content="使用cocoapods时pod install失败，报错fatal:Not a git repository今天使用cocoapods时发现出现了这个问题，网上搜罗了一下方法，但并不管用，只能到系统目录下吧cocoapods删除重来了。打开finder，快捷键shift+command+G打开快速查找输入~,找到隐藏文件.cocoapods，把里面的子文件都删除了，然后回到项目工程，使用终端在po">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-29%20%E4%B8%8A%E5%8D%8810.17.59.png?Expires=1543461848&OSSAccessKeyId=TMP.AQGB3vH4OxnCLZ3DvlhyRuQfFTtH-4hRNzDP-1sAJO7RccBzTAvVsubtJ4inADAtAhR7ma7aRZY7gpUanwKdDI-6lkaCMQIVAJ2oIqcoMm7KORKEq6N_znHZ57s4&Signature=bBp0UgeGcuSy96CRIOo557ub%2Fns%3D">
+<meta property="og:updated_time" content="2018-11-29T02:49:02.540Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天寒地裂">
-<meta name="twitter:description" content="生活就像二进制，不是1就是0。">
+<meta name="twitter:title" content="使用cocoapods时pod install失败，报错fatal:Not a git repository">
+<meta name="twitter:description" content="使用cocoapods时pod install失败，报错fatal:Not a git repository今天使用cocoapods时发现出现了这个问题，网上搜罗了一下方法，但并不管用，只能到系统目录下吧cocoapods删除重来了。打开finder，快捷键shift+command+G打开快速查找输入~,找到隐藏文件.cocoapods，把里面的子文件都删除了，然后回到项目工程，使用终端在po">
+<meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-29%20%E4%B8%8A%E5%8D%8810.17.59.png?Expires=1543461848&OSSAccessKeyId=TMP.AQGB3vH4OxnCLZ3DvlhyRuQfFTtH-4hRNzDP-1sAJO7RccBzTAvVsubtJ4inADAtAhR7ma7aRZY7gpUanwKdDI-6lkaCMQIVAJ2oIqcoMm7KORKEq6N_znHZ57s4&Signature=bBp0UgeGcuSy96CRIOo557ub%2Fns%3D">
 
 
 
@@ -137,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://www.coldcrack.me/archives/page/3/"/>
+  <link rel="canonical" href="http://www.coldcrack.me/2018/11/14/cocoapods_fatal01/"/>
 
 
 
 
 
-  <title>归档 | 天寒地裂</title>
+  <title>使用cocoapods时pod install失败，报错fatal:Not a git repository | 天寒地裂</title>
   
 
 
@@ -162,7 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -304,410 +308,202 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
-        
-        
-         
-        
-        OK! 目前共计 35 篇日志。 继续努力。
-      </span>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.coldcrack.me/2018/11/14/cocoapods_fatal01/">
 
-      
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="天寒地裂">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="天寒地裂">
+    </span>
+
+    
+      <header class="post-header">
 
         
         
+          <h1 class="post-title" itemprop="name headline">使用cocoapods时pod install失败，报错fatal:Not a git repository</h1>
         
 
-        
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-14T12:59:01+08:00">
+                2018-11-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/19/Next_Custom/" itemprop="url">
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
               
-                <span itemprop="name">Hexo Next主题定制化</span>
+                <span class="post-meta-item-text">分类于</span>
               
-            </a>
-        
-      </h2>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CocoaPods/" itemprop="url" rel="index">
+                    <span itemprop="name">CocoaPods</span>
+                  </a>
+                </span>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-19T12:51:11+08:00"
-              content="2018-07-19" >
-          07-19
-        </time>
-      </div>
+                
+                
+              
+            </span>
+          
 
-    </header>
-  </article>
+          
+            
+          
 
+          
+          
+             <span id="/2018/11/14/cocoapods_fatal01/" class="leancloud_visitors" data-flag-title="使用cocoapods时pod install失败，报错fatal:Not a git repository">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/19/iosCrash-code1002/" itemprop="url">
-              
-                <span itemprop="name">网络请求报错 code = 1002 处理</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-19T12:43:31+08:00"
-              content="2018-07-19" >
-          07-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/18/NexT_DaoVoice/" itemprop="url">
-              
-                <span itemprop="name">Hexo NexT主题集成DaoVoice在线联系</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-18T23:54:11+08:00"
-              content="2018-07-18" >
-          07-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="使用cocoapods时pod-install失败，报错fatal-Not-a-git-repository"><a href="#使用cocoapods时pod-install失败，报错fatal-Not-a-git-repository" class="headerlink" title="使用cocoapods时pod install失败，报错fatal:Not a git repository"></a>使用cocoapods时pod install失败，报错fatal:Not a git repository</h1><p>今天使用cocoapods时发现出现了这个问题，网上搜罗了一下方法，但并不管用，只能到系统目录下吧cocoapods删除重来了。<br>打开<code>finder</code>，快捷键<code>shift+command+G</code>打开快速查找输入<code>~</code>,找到隐藏文件<code>.cocoapods</code>，把里面的子文件都删除了，然后回到项目工程，使用终端在pod install，这时候他会先自动安装cocoapods的<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-29%20%E4%B8%8A%E5%8D%8810.17.59.png?Expires=1543461848&amp;OSSAccessKeyId=TMP.AQGB3vH4OxnCLZ3DvlhyRuQfFTtH-4hRNzDP-1sAJO7RccBzTAvVsubtJ4inADAtAhR7ma7aRZY7gpUanwKdDI-6lkaCMQIVAJ2oIqcoMm7KORKEq6N_znHZ57s4&amp;Signature=bBp0UgeGcuSy96CRIOo557ub%2Fns%3D" alt="屏幕快照 2018-11-29 上午10.17.59"></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/18/Next_Gittalk/" itemprop="url">
-              
-                <span itemprop="name">Hexo Next主题集成Gittalk</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-18T23:32:11+08:00"
-              content="2018-07-18" >
-          07-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/18/MacforHexoBlogNexTConfig/" itemprop="url">
-              
-                <span itemprop="name">Mac搭建Hexo博客及NexT主题配置优化</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-18T22:59:31+08:00"
-              content="2018-07-18" >
-          07-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/18/aliICloud-domain/" itemprop="url">
-              
-                <span itemprop="name">使用阿里云购买域名及域名解析</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-18T22:59:31+08:00"
-              content="2018-07-18" >
-          07-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/17/macUploadGitHub/" itemprop="url">
-              
-                <span itemprop="name">mac系统下上传代码至GitHub</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-17T22:27:31+08:00"
-              content="2018-07-17" >
-          07-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/28/Bugly-instructions/" itemprop="url">
-              
-                <span itemprop="name">Bugly集成</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-28T10:59:31+08:00"
-              content="2018-06-28" >
-          06-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/27/iOS_NavigationBtn/" itemprop="url">
-              
-                <span itemprop="name">iOS导航栏按钮带角标数量自定义设置</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-27T10:59:31+08:00"
-              content="2018-06-27" >
-          06-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/26/iOS_keyBoardType/" itemprop="url">
-              
-                <span itemprop="name">iOS开发之键盘类型</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-26T10:59:31+08:00"
-              content="2018-06-26" >
-          06-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    <div>
+      
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    </div>
+    
+
+    
+
+    
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CocoaPods/" rel="tag"><i class="fa fa-tag"></i> CocoaPods</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/25/Charles_SSL/" rel="next" title="花瓶Charles转显示乱码问题">
+                <i class="fa fa-chevron-left"></i> 花瓶Charles转显示乱码问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/4/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -715,6 +511,13 @@
 
 
           
+
+  
+    <div id="gitalk-container"></div>
+    
+  
+
+
 
         </div>
         
@@ -735,8 +538,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -810,6 +622,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用cocoapods时pod-install失败，报错fatal-Not-a-git-repository"><span class="nav-number">1.</span> <span class="nav-text">使用cocoapods时pod install失败，报错fatal:Not a git repository</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -974,6 +802,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1014,6 +846,21 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '1d6f1a0b07f71d13c86c',
+          clientSecret: 'e42e11321fee0b0e527c79195d7e63ff7e8af241',
+          repo: 'Coldcrack.github.io',
+          owner: 'Coldcrack',
+          admin: ['Coldcrack'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
