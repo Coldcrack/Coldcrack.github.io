@@ -106,14 +106,14 @@
 <meta property="og:site_name" content="天寒地裂">
 <meta property="og:description" content="逃逸闭包（@escaping）和非逃逸闭包今天学习GCD时，用闭包写了个函数出现了这些问题，如图问题报错： 1.Function types cannot have argument labels; use &amp;apos;_&amp;apos; before &amp;apos;result&amp;apos; 2.Closure use of non-escaping parameter &amp;apos;comletion&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/1411204-b56b97c93063dbaa.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/1411204-065fc11c7ec14729.png">
-<meta property="og:updated_time" content="2018-09-30T07:28:25.249Z">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/1411204-b56b97c93063dbaa.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/1411204-065fc11c7ec14729.png">
+<meta property="og:updated_time" content="2018-12-10T07:14:26.829Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="逃逸闭包（@escaping）和非逃逸闭包">
 <meta name="twitter:description" content="逃逸闭包（@escaping）和非逃逸闭包今天学习GCD时，用闭包写了个函数出现了这些问题，如图问题报错： 1.Function types cannot have argument labels; use &amp;apos;_&amp;apos; before &amp;apos;result&amp;apos; 2.Closure use of non-escaping parameter &amp;apos;comletion&amp;">
-<meta name="twitter:image" content="http://oprlyd36a.bkt.clouddn.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png">
+<meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png">
 
 
 
@@ -424,7 +424,7 @@
       
 
       
-        <h1 id="逃逸闭包（-escaping）和非逃逸闭包"><a href="#逃逸闭包（-escaping）和非逃逸闭包" class="headerlink" title="逃逸闭包（@escaping）和非逃逸闭包"></a>逃逸闭包（@escaping）和非逃逸闭包</h1><p>今天学习GCD时，用闭包写了个函数出现了这些问题，如图<br><img src="http://oprlyd36a.bkt.clouddn.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png" alt="6455CAF8-20E8-4F70-B585-1CF2840BD5F5"><br>问题报错：</p>
+        <h1 id="逃逸闭包（-escaping）和非逃逸闭包"><a href="#逃逸闭包（-escaping）和非逃逸闭包" class="headerlink" title="逃逸闭包（@escaping）和非逃逸闭包"></a>逃逸闭包（@escaping）和非逃逸闭包</h1><p>今天学习GCD时，用闭包写了个函数出现了这些问题，如图<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png" alt="6455CAF8-20E8-4F70-B585-1CF2840BD5F5"><br>问题报错：</p>
 <pre><code>1.Function types cannot have argument labels; use &apos;_&apos; before &apos;result&apos;
 2.Closure use of non-escaping parameter &apos;comletion&apos; may allow it to escape
 3.Closure use of non-escaping parameter &apos;comletion&apos; may allow it to escape
@@ -433,10 +433,10 @@
 </code></pre><p>1.函数类型前不能有参数标签，需要用‘_’替换<br>2.闭包使用了非逃逸参数‘comletion’,需要让它逃逸<br>3.闭包使用了非逃逸参数‘comletion’,需要让它逃逸<br>4.参数‘completion’ 是隐式的非逃逸闭包<br>5.Extraneous argument label ‘result:’ in call</p>
 <p>虽然我们可以根据这些提示，来修改错误代码</p>
 <h3 id="非逃逸闭包"><a href="#非逃逸闭包" class="headerlink" title="非逃逸闭包"></a>非逃逸闭包</h3><p>非逃逸闭包:当函数执行过程中,执行的函数内部的闭包,叫做非逃逸闭包 @noescape<br>非逃逸闭包的生命周期：</p>
-<p>把闭包作为参数传递给函数。<br>函数中运行该闭包。<br>退出函数。<br><img src="http://oprlyd36a.bkt.clouddn.com/1411204-b56b97c93063dbaa.png" alt="1411204-b56b97c93063dbaa"></p>
+<p>把闭包作为参数传递给函数。<br>函数中运行该闭包。<br>退出函数。<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/1411204-b56b97c93063dbaa.png" alt="1411204-b56b97c93063dbaa"></p>
 <p>如图，函数在运行完后，闭包并没有逃逸，而是被限制在函数中。</p>
 <h3 id="逃逸闭包"><a href="#逃逸闭包" class="headerlink" title="逃逸闭包"></a>逃逸闭包</h3><p>逃逸闭包:当函数执行结束后,才去调用函数内部的闭包,叫做逃逸闭包<br>逃逸闭包的生命周期：<br>逃逸闭包恰恰与非逃逸闭包相反，其生命周期长于相关函数，当函数退出的时候，逃逸闭包的引用仍然被其他对象持有，不会在相关函数结束后释放。(有点像OC中的strong哈)</p>
-<p><img src="http://oprlyd36a.bkt.clouddn.com/1411204-065fc11c7ec14729.png" alt="1411204-065fc11c7ec14729"></p>
+<p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/1411204-065fc11c7ec14729.png" alt="1411204-065fc11c7ec14729"></p>
 <p>如上图所示，当函数结束的时候，闭包依然会在外面的世界里逍遥快活，对于内存管理来说这可不是好现象。</p>
 <h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>而在3.0中，闭包参数默认是非逃逸类型，如果需要逃逸类型的闭包，记得使用关键字<code>@escaping</code>。</p>
 <p>而对于非逃逸型闭包，由于其生命周期确定短于相关函数，编译器可以据此做性能优化。</p>

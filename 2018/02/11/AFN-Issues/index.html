@@ -106,13 +106,13 @@
 <meta property="og:site_name" content="天寒地裂">
 <meta property="og:description" content="使用AFNetworking post请求中文乱码问题使用AFNetworking post请求中文乱码问题ios项目开发时，使用AFN框架向后台发送post请求时出现中文乱码，具体是在请求体的参数中需要包含中文内容,使用charles抓包发现也是中文，单到了后台就是乱码。后来百度了一下，了解ios中文请求后台是需要转码的，具体需要问后台请求格式是什么，一般都是utf-8格式,也有GBK格式的。下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/F90E4976-70B7-4B11-A8B1-7989A5892B1B.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/C3CF1821-BE7B-4358-889F-79D8D075D528.png">
-<meta property="og:updated_time" content="2018-07-18T01:18:54.000Z">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/C3CF1821-BE7B-4358-889F-79D8D075D528.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/F90E4976-70B7-4B11-A8B1-7989A5892B1B.png">
+<meta property="og:updated_time" content="2018-12-10T06:51:55.203Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用AFNetworking post请求中文乱码问题">
 <meta name="twitter:description" content="使用AFNetworking post请求中文乱码问题使用AFNetworking post请求中文乱码问题ios项目开发时，使用AFN框架向后台发送post请求时出现中文乱码，具体是在请求体的参数中需要包含中文内容,使用charles抓包发现也是中文，单到了后台就是乱码。后来百度了一下，了解ios中文请求后台是需要转码的，具体需要问后台请求格式是什么，一般都是utf-8格式,也有GBK格式的。下">
-<meta name="twitter:image" content="http://oprlyd36a.bkt.clouddn.com/F90E4976-70B7-4B11-A8B1-7989A5892B1B.png">
+<meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/C3CF1821-BE7B-4358-889F-79D8D075D528.png">
 
 
 
@@ -427,10 +427,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSString *str1 = @&quot;我是字符串&quot;;</span><br><span class="line">NSString *str2 = [str1 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; //utf8编码</span><br></pre></td></tr></table></figure>
 <p>你以为这样就完了吗？还没有，这还只是修改了参数，请求头我们还需要修改一个地方</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];</span><br><span class="line">            [mgr.requestSerializer setValue:@&quot;application/x-www-form-urlencoded; charset=utf-8&quot; forHTTPHeaderField:@&quot;Content-Type&quot;];</span><br></pre></td></tr></table></figure>
-<p>如果你本身就是使用的AFN的post表单提交，可以忽略，如果不是，请添加这个请求头设置。<br>下面是表单提交的请求头<br><img src="http://oprlyd36a.bkt.clouddn.com/F90E4976-70B7-4B11-A8B1-7989A5892B1B.png" alt="F90E4976-70B7-4B11-A8B1-7989A5892B1B"></p>
-<p>而utf8编码后的数据样式是：<code>-%E6%98%AF%E7%9A%84</code> utf-8编码<br>后台拿到的就是这样的数据格式，get请求到utf-8编码我们需要解码</p>
+<p>如果你本身就是使用的AFN的post表单提交，可以忽略，如果不是，请添加这个请求头设置。<br>下面是表单提交的请求头<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/C3CF1821-BE7B-4358-889F-79D8D075D528.png" alt="F90E4976-70B7-4B11-A8B1-7989A5892B1B"><br>而utf8编码后的数据样式是：<code>-%E6%98%AF%E7%9A%84</code> utf-8编码<br>后台拿到的就是这样的数据格式，get请求到utf-8编码我们需要解码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSString *str3 = [str2 stringByRemovingPercentEncoding]; //解码</span><br></pre></td></tr></table></figure>
-<p>而应我们的项目需求，在post表单时，带的参数要求是中文<br><img src="http://oprlyd36a.bkt.clouddn.com/C3CF1821-BE7B-4358-889F-79D8D075D528.png" alt="C3CF1821-BE7B-4358-889F-79D8D075D528"></p>
+<p>而应我们的项目需求，在post表单时，带的参数要求是中文<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/F90E4976-70B7-4B11-A8B1-7989A5892B1B.png" alt="C3CF1821-BE7B-4358-889F-79D8D075D528"></p>
 <p>用的是post表单请求，这个是对<code>NSURLSessionDataTask post</code>请求的封装。<br>那么我们只需要在请求头设置为<code>@”application/x-www-form-urlencoded; charset=utf-8”</code>就可以了。</p>
 
       
@@ -479,8 +478,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/20/MacOfAllow any sourceConfig/" rel="next" title="MAC设置允许任何来源">
-                <i class="fa fa-chevron-left"></i> MAC设置允许任何来源
+              <a href="/2018/02/11/github&gitee&SSH/" rel="next" title="github和码云的SSH公钥">
+                <i class="fa fa-chevron-left"></i> github和码云的SSH公钥
               </a>
             
           </div>
@@ -489,8 +488,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/11/github&gitee&SSH/" rel="prev" title="github和码云的SSH公钥">
-                github和码云的SSH公钥 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/26/iOS_keyBoardType/" rel="prev" title="iOS开发之键盘类型">
+                iOS开发之键盘类型 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

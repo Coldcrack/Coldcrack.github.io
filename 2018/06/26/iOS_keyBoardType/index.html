@@ -106,14 +106,14 @@
 <meta property="og:site_name" content="天寒地裂">
 <meta property="og:description" content="iOS开发之键盘类型一般我们在开发时使用键盘输入，默认都是26键盘类型。而有时候根据产品需求我们在键盘输入时，需要修改键盘类型如： 1field.keyboardType = UIKeyboardTypeNumberPad; 这个只是纯数字键盘，没有小数点，效果如下 而有时候我们需要在textField中输入价格时，发现数字键盘没有小数点，而自定义又很麻烦,这里提供参考，想自定义的朋友可以看看。参">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/20150915130822922.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/20150915131341794.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/20150915131829205.png">
-<meta property="og:updated_time" content="2018-07-18T01:22:16.000Z">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20150915130822922.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20150915131341794.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20150915131829205.png">
+<meta property="og:updated_time" content="2018-12-10T07:23:18.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS开发之键盘类型">
 <meta name="twitter:description" content="iOS开发之键盘类型一般我们在开发时使用键盘输入，默认都是26键盘类型。而有时候根据产品需求我们在键盘输入时，需要修改键盘类型如： 1field.keyboardType = UIKeyboardTypeNumberPad; 这个只是纯数字键盘，没有小数点，效果如下 而有时候我们需要在textField中输入价格时，发现数字键盘没有小数点，而自定义又很麻烦,这里提供参考，想自定义的朋友可以看看。参">
-<meta name="twitter:image" content="http://oprlyd36a.bkt.clouddn.com/20150915130822922.png">
+<meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20150915130822922.png">
 
 
 
@@ -426,13 +426,13 @@
       
         <h1 id="iOS开发之键盘类型"><a href="#iOS开发之键盘类型" class="headerlink" title="iOS开发之键盘类型"></a>iOS开发之键盘类型</h1><p>一般我们在开发时使用键盘输入，默认都是26键盘类型。而有时候根据产品需求我们在键盘输入时，需要修改键盘类型<br>如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">field.keyboardType = UIKeyboardTypeNumberPad;</span><br></pre></td></tr></table></figure>
-<p>这个只是纯数字键盘，没有小数点，效果如下<br><img src="http://oprlyd36a.bkt.clouddn.com/20150915130822922.png" alt="20150915130822922"></p>
+<p>这个只是纯数字键盘，没有小数点，效果如下<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20150915130822922.png" alt="20150915130822922"></p>
 <p>而有时候我们需要在textField中输入价格时，发现数字键盘没有小数点，而自定义又很麻烦,这里提供参考，想自定义的朋友可以看看。<br>参考链接:<a href="http://blog.csdn.net/zaitianaoxiang/article/details/7895229" target="_blank" rel="noopener">http://blog.csdn.net/zaitianaoxiang/article/details/7895229</a><br>而实际上，苹果开发为我们提供了这样的一个API</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">field.keyboardType = UIKeyboardTypeDecimalPad</span><br></pre></td></tr></table></figure>
-<p>效果如下<br><img src="http://oprlyd36a.bkt.clouddn.com/20150915131341794.png" alt="20150915131341794"></p>
+<p>效果如下<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20150915131341794.png" alt="20150915131341794"></p>
 <p>完成后我们发现在textField中我们可以输入任意数量的小数点，这不符合价格设定。<br>所以我们还需要通过textField的代理来判断输入内容是否符合正浮点类型。<br>代码如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//监听键盘输入</span><br><span class="line">- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string &#123;</span><br><span class="line">        return [self validateMoney:string];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-(BOOL)validateMoney:(NSString *)money</span><br><span class="line">&#123;</span><br><span class="line">    BOOL res = YES;</span><br><span class="line">NSString *phoneRegex = @&quot;^[0-9]+(\\.[0-9]&#123;1,2&#125;)?$&quot;;</span><br><span class="line">NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;,phoneRegex];</span><br><span class="line">return YES;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>普通键盘下经常要在一些特殊的场景要把return键改写成中文<br>（1）IM 发送<br>（2）搜索<br>（3） 完成<br>（4）前往<br>……<br><img src="http://oprlyd36a.bkt.clouddn.com/20150915131829205.png" alt="20150915131829205"></p>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>普通键盘下经常要在一些特殊的场景要把return键改写成中文<br>（1）IM 发送<br>（2）搜索<br>（3） 完成<br>（4）前往<br>……<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20150915131829205.png" alt="20150915131829205"></p>
 
       
     </div>
@@ -480,8 +480,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/11/github&gitee&SSH/" rel="next" title="github和码云的SSH公钥">
-                <i class="fa fa-chevron-left"></i> github和码云的SSH公钥
+              <a href="/2018/02/11/AFN-Issues/" rel="next" title="使用AFNetworking post请求中文乱码问题">
+                <i class="fa fa-chevron-left"></i> 使用AFNetworking post请求中文乱码问题
               </a>
             
           </div>

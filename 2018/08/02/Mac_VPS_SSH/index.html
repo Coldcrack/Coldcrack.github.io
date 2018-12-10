@@ -106,15 +106,15 @@
 <meta property="og:site_name" content="天寒地裂">
 <meta property="og:description" content="远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! 刚刚在删掉主机后，重新建了一个主机，发现IP和原来是一样的，然后继续按照原来连接主机的方式，在终端写入代码，报了错误，错误原因如下： WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!  于是就度娘（不得不说搜索引擎是个好东西），找了">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/20160403212616022.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/20160403214246747.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/1479375182_8683.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/1479375192_3660.png">
-<meta property="og:updated_time" content="2018-08-03T02:10:55.000Z">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20160403212616022.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20160403214246747.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/1479375182_8683.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/1479375192_3660.png">
+<meta property="og:updated_time" content="2018-12-10T07:26:44.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="远程登录错误WARNING:REMOTE HOST IDENTIFICATION HAS CHANGED!">
 <meta name="twitter:description" content="远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! 刚刚在删掉主机后，重新建了一个主机，发现IP和原来是一样的，然后继续按照原来连接主机的方式，在终端写入代码，报了错误，错误原因如下： WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!  于是就度娘（不得不说搜索引擎是个好东西），找了">
-<meta name="twitter:image" content="http://oprlyd36a.bkt.clouddn.com/20160403212616022.png">
+<meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20160403212616022.png">
 
 
 
@@ -426,8 +426,8 @@
 
       
         <h1 id="远程登录错误解决办法-WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED"><a href="#远程登录错误解决办法-WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED" class="headerlink" title="远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!"></a>远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</h1><p> 刚刚在删掉主机后，重新建了一个主机，发现IP和原来是一样的，然后继续按照原来连接主机的方式，在终端写入代码，报了错误，错误原因如下：<br> WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</p>
-<p><img src="http://oprlyd36a.bkt.clouddn.com/20160403212616022.png" alt="20160403212616022"></p>
-<p>于是就度娘（不得不说搜索引擎是个好东西），找了好久发现有篇文章里面提到.ssh/known_hosts文件，查看果然有这个文件：<br><img src="http://oprlyd36a.bkt.clouddn.com/20160403214246747.png" alt="20160403214246747"></p>
+<p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20160403212616022.png" alt="20160403212616022"></p>
+<p>于是就度娘（不得不说搜索引擎是个好东西），找了好久发现有篇文章里面提到.ssh/known_hosts文件，查看果然有这个文件：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/20160403214246747.png" alt="20160403214246747"></p>
 <p>就想这文件是个啥东东，待一查，才明白了，原来known_hosts是记录远程主机的公钥的文件，之前重装个系统，而保存的公钥还是未重装系统的系统公钥，在ssh链接的时候首先会验证公钥，如果公钥不对，那么就会报错，</p>
 <p>解决办法：</p>
 <p>1、将known_hosts文件中的与登录错误的IP的公钥删除即可，下图就是我的218机子的公钥（实则是之前系统的公钥），然后将其删除，再ssh 登录 great 登录成功了。</p>
@@ -436,9 +436,9 @@
 <p>比如我们要将172.16.152.209的公钥信息清除，使用命令（请自己将172.16.152.209替换成自己的IP或域名）：</p>
 <pre><code>ssh-keygen -R 172.16.152.209
 </code></pre><p>如下图：</p>
-<p><img src="http://oprlyd36a.bkt.clouddn.com/1479375182_8683.png" alt="1479375182_8683"></p>
+<p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/1479375182_8683.png" alt="1479375182_8683"></p>
 <p>完毕之后就可以了，再次登陆就后要求确认是否公钥：</p>
-<p><img src="http://oprlyd36a.bkt.clouddn.com/1479375192_3660.png" alt="1479375192_3660"></p>
+<p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/1479375192_3660.png" alt="1479375192_3660"></p>
 <p>至此ssh链接错误成功解决，记录 在此以供查询</p>
 <p>原文<a href="https://blog.csdn.net/nahancy/article/details/51052127" target="_blank" rel="noopener">Linux SSH 远程登录错误解决办法 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</a><br>感谢<a href="https://blog.csdn.net/nahancy" target="_blank" rel="noopener">呐喊6510</a>的分享</p>
 

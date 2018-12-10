@@ -106,14 +106,14 @@
 <meta property="og:site_name" content="天寒地裂">
 <meta property="og:description" content="CocoaPods制作第三方代码库，公共远程库前言Cocoapods 是个很好用的三方库管理工具，一直用的别人的三方库，突然想自己也搞一个三方库试试，查了许多方法，终于成功了，下面记录方法步骤。 环境安装首先我们需要安装CocoaPods环境，之前写过CocoaPods环境安装，没安装的同学可以跟着安装下。最好安装最新的环境，否则执行下边步骤可能会出现错误。 制作本地库打开目录，cd到指定目录，输">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/35D6BEB9-C077-4B8C-AB91-102D8FD3979D.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/FAE2A4DE-A369-4407-989F-E47CE41B5334.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/9EB17B23-6E19-4014-BA8B-E9DB4486FDF8.png">
-<meta property="og:updated_time" content="2018-12-07T06:41:23.735Z">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/35D6BEB9-C077-4B8C-AB91-102D8FD3979D.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/FAE2A4DE-A369-4407-989F-E47CE41B5334.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/9EB17B23-6E19-4014-BA8B-E9DB4486FDF8.png">
+<meta property="og:updated_time" content="2018-12-10T06:55:05.217Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CocoaPods制作第三方代码库，公共远程库">
 <meta name="twitter:description" content="CocoaPods制作第三方代码库，公共远程库前言Cocoapods 是个很好用的三方库管理工具，一直用的别人的三方库，突然想自己也搞一个三方库试试，查了许多方法，终于成功了，下面记录方法步骤。 环境安装首先我们需要安装CocoaPods环境，之前写过CocoaPods环境安装，没安装的同学可以跟着安装下。最好安装最新的环境，否则执行下边步骤可能会出现错误。 制作本地库打开目录，cd到指定目录，输">
-<meta name="twitter:image" content="http://oprlyd36a.bkt.clouddn.com/35D6BEB9-C077-4B8C-AB91-102D8FD3979D.png">
+<meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/35D6BEB9-C077-4B8C-AB91-102D8FD3979D.png">
 
 
 
@@ -493,7 +493,7 @@ Pod installation complete! There is 1 dependency from the Podfile and 1 total po
 To learn more about the template see `https://github.com/CocoaPods/pod-template.git`.
 To learn more about creating a new pod, see `http://guides.cocoapods.org/making/making-a-cocoapod`.
 </code></pre><p>然后会自动打开程序，这是一个空的本地库，你会看到如下目录结构</p>
-<p><img src="http://oprlyd36a.bkt.clouddn.com/35D6BEB9-C077-4B8C-AB91-102D8FD3979D.png" alt="35D6BEB9-C077-4B8C-AB91-102D8FD3979D"></p>
+<p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/35D6BEB9-C077-4B8C-AB91-102D8FD3979D.png" alt="35D6BEB9-C077-4B8C-AB91-102D8FD3979D"></p>
 <h3 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h3><p>1、我们自己的代码不管是新添加文件、还是现有代码有改动，都需要需要在cd到Example下执行pod install后，才能导入头文件import ZMBase，代码才会更新。</p>
 <p>2.我们自己的代码文件最多一层文件结构即Animation文件夹内只能放代码，不能再创建子文件夹。</p>
 <p>3.每个类文件如果想暴露出去，则需要在代码类名前添加修饰符即(public class xxx或者open extension xxx)，添加public、open，而extension不能用open修饰所以用plublic修饰。</p>
@@ -555,7 +555,7 @@ end
 <p>*注意：Specs Repo和Code Repo是不一样的，存放的地址也不一样，不能存放到同个git库下</p>
 <h3 id="提交到官方的CocoaPods"><a href="#提交到官方的CocoaPods" class="headerlink" title="提交到官方的CocoaPods"></a>提交到官方的CocoaPods</h3><p>我们cd 到 有<code>podspec</code>后缀的文件的目录下</p>
 <h4 id="1-提交源代码到git"><a href="#1-提交源代码到git" class="headerlink" title="1.提交源代码到git"></a>1.提交源代码到git</h4><p>我们在github上建立个远程库用来存放代码，也可以是码云什么的</p>
-<p><img src="http://oprlyd36a.bkt.clouddn.com/FAE2A4DE-A369-4407-989F-E47CE41B5334.png" alt="FAE2A4DE-A369-4407-989F-E47CE41B5334"></p>
+<p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/FAE2A4DE-A369-4407-989F-E47CE41B5334.png" alt="FAE2A4DE-A369-4407-989F-E47CE41B5334"></p>
 <p>error 是库名已存在，让再换一个</p>
 <pre><code>git remote add origin https://github.com/Coldcrack/LFToolPod
 git add .
@@ -568,7 +568,7 @@ hangxiniMac:LFToolPod lvfeng$ git push origin 1.0.0
 Total 0 (delta 0), reused 0 (delta 0)
 To https://github.com/Coldcrack/LFToolPod.git
  * [new tag]         1.0.0 -&gt; 1.0.0
-</code></pre><p>执行完命令后，这时候已经把代码提交到了git上，如下图：<br><img src="http://oprlyd36a.bkt.clouddn.com/9EB17B23-6E19-4014-BA8B-E9DB4486FDF8.png" alt="9EB17B23-6E19-4014-BA8B-E9DB4486FDF8"></p>
+</code></pre><p>执行完命令后，这时候已经把代码提交到了git上，如下图：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/9EB17B23-6E19-4014-BA8B-E9DB4486FDF8.png" alt="9EB17B23-6E19-4014-BA8B-E9DB4486FDF8"></p>
 <h4 id="2-提交Spec文件到Specs-Repo"><a href="#2-提交Spec文件到Specs-Repo" class="headerlink" title="2.提交Spec文件到Specs Repo"></a>2.提交Spec文件到Specs Repo</h4><p>–1&gt;提交到官方的Specs上</p>
 <p>首先先用cd到Spec文件所在的目录，然后执行pod lib lint</p>
 <pre><code>hangxiniMac:LFToolPod lvfeng$ pod lib lint

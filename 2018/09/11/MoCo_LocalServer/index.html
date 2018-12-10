@@ -106,12 +106,12 @@
 <meta property="og:site_name" content="天寒地裂">
 <meta property="og:description" content="用Moco在Mac上搭建本地服务端前言这段时间开发经常遇到这样的问题，UI设计稿出完了，但是服务端后台那边还在做，接口还在写，但我们又不想写死数据，希望能过通过请求接口获取数据来搭建界面。那该怎么办呢？这样就要用到Moco了，我们可以自己在本地搭建一个服务器写好想要数据，然后我们通过接口get或post请求将数据拿到项目中去使用。 准备工作在Mac上配置JDK环境，去官网直接下个JDK安装包即可点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/3103049-ffb2b311f4e5399e.png">
-<meta property="og:updated_time" content="2018-09-11T01:21:33.000Z">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/3103049-ffb2b311f4e5399e.png">
+<meta property="og:updated_time" content="2018-12-10T07:36:32.169Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Moco在Mac上搭建本地服务端">
 <meta name="twitter:description" content="用Moco在Mac上搭建本地服务端前言这段时间开发经常遇到这样的问题，UI设计稿出完了，但是服务端后台那边还在做，接口还在写，但我们又不想写死数据，希望能过通过请求接口获取数据来搭建界面。那该怎么办呢？这样就要用到Moco了，我们可以自己在本地搭建一个服务器写好想要数据，然后我们通过接口get或post请求将数据拿到项目中去使用。 准备工作在Mac上配置JDK环境，去官网直接下个JDK安装包即可点">
-<meta name="twitter:image" content="http://oprlyd36a.bkt.clouddn.com/3103049-ffb2b311f4e5399e.png">
+<meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/3103049-ffb2b311f4e5399e.png">
 
 
 
@@ -423,7 +423,7 @@
 
       
         <h1 id="用Moco在Mac上搭建本地服务端"><a href="#用Moco在Mac上搭建本地服务端" class="headerlink" title="用Moco在Mac上搭建本地服务端"></a>用Moco在Mac上搭建本地服务端</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这段时间开发经常遇到这样的问题，UI设计稿出完了，但是服务端后台那边还在做，接口还在写，但我们又不想写死数据，希望能过通过请求接口获取数据来搭建界面。那该怎么办呢？<br>这样就要用到Moco了，我们可以自己在本地搭建一个服务器写好想要数据，然后我们通过接口get或post请求将数据拿到项目中去使用。</p>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>在Mac上配置JDK环境，去<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">官网</a>直接下个JDK安装包即可<br>点击链接下载jar包<a href="https://repo1.maven.org/maven2/com/github/dreamhead/moco-runner/0.11.0/moco-runner-0.11.0-standalone.jar" target="_blank" rel="noopener">moco服务端</a><br>新建文件夹（命名任意）,新建Config.json文件，这个文件用于配置api，里面引用需要配置到服务器的请求文件（后缀必须用.json，并且打开方式建议使用SublimeText打开编辑）,新建文件也可以使用使用SublimeText新建。<br><img src="http://oprlyd36a.bkt.clouddn.com/3103049-ffb2b311f4e5399e.png" alt="3103049-ffb2b311f4e5399e"></p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>在Mac上配置JDK环境，去<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">官网</a>直接下个JDK安装包即可<br>点击链接下载jar包<a href="https://repo1.maven.org/maven2/com/github/dreamhead/moco-runner/0.11.0/moco-runner-0.11.0-standalone.jar" target="_blank" rel="noopener">moco服务端</a><br>新建文件夹（命名任意）,新建Config.json文件，这个文件用于配置api，里面引用需要配置到服务器的请求文件（后缀必须用.json，并且打开方式建议使用SublimeText打开编辑）,新建文件也可以使用使用SublimeText新建。<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/3103049-ffb2b311f4e5399e.png" alt="3103049-ffb2b311f4e5399e"></p>
 <h4 id="全局文件配置"><a href="#全局文件配置" class="headerlink" title="全局文件配置"></a>全局文件配置</h4><p>Moco支持在全局的配置文件中引入其他配置文件，这样就可以分服务定义配置文件，便于管理。在全局文件中引入即可。<br>1.在localServer文件夹中新建一个login的文件夹；<br>2.在login文件夹中新建login_request.json文件以及login_response.json文件；<br>在Config.json中写入</p>
 <pre><code>[
    {
