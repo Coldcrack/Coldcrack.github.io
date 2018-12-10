@@ -106,26 +106,26 @@
 <meta property="og:site_name" content="天寒地裂">
 <meta property="og:description" content="iOS 推送推送原理APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。Apple推送机制可以概括为下图 图中Provider意思为供应商，就是后台服务器。如图我们可以将消息推送分为三个阶段。 第一阶段：Java后台把要发送的消息、目的iPhone的标识打包，发给APNS。第二阶段：APNS在自身的已注册Push服务的iPho">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438865253253.jpg?Expires=1544410700&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=lKf%2FDGZXR%2Ftazn4C4hK7FlyClEw%3D">
-<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438866721811.jpg?Expires=1544407030&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=ioE7qrqpWIc2H9noA3rqWMKdaOs%3D">
-<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438947787771.png?Expires=1544407050&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=sWoItVhiR2sr%2F9LBTigyuNjX%2BLg%3D">
-<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438952747273.png?Expires=1544407083&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=%2BrO90V0Wrl0GFXWzgIEikvuMwQA%3D">
-<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438953349940.png?Expires=1544407238&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=QSOom9IMZyRfRf2XW%2BZk0RGuXlQ%3D">
-<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438953504801.png?Expires=1544407300&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=McHNystDivADLf6S9f%2ByGD19MLs%3D">
-<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955337492.png?Expires=1544407314&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=qIEv4V8OjxLBX3kQ0zGfZjUuxFU%3D">
-<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955470163.png?Expires=1544407328&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=bPynJ1E3ioHm7pytSSPgWRH1JN8%3D">
-<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955701622.png?Expires=1544407822&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=JEsSMeZR%2BeFdTto5oy%2FpalWzgvw%3D">
-<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959193412.png?Expires=1544407851&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=eIPnJHVLDeskl0yoIw203%2Bg%2BGGo%3D">
-<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959356494.png?Expires=1544407914&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=daCSCARzroJcRgBU1zlnPaDIpVc%3D">
-<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959729919.png?Expires=1544407934&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=q9wJuiVeyVhhHUKJEUedmILSFoc%3D">
-<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439051694762.png?Expires=1544407950&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=h4P50mv1Zc85nPSKONzrQQ0w97A%3D">
-<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439052059875.png?Expires=1544407971&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=hJE%2F%2BFVmqaJuWRTl51cZY%2FMRfnQ%3D">
-<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439057698937.jpg?Expires=1544407991&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=GXgCKGI1lUjN%2F4RZq7YGWObevj0%3D">
-<meta property="og:updated_time" content="2018-12-10T01:58:40.365Z">
+<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438865253253.jpg">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438866721811.jpg">
+<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438947787771.png">
+<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438952747273.png">
+<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438953349940.png">
+<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438953504801.png">
+<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955337492.png">
+<meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955470163.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955701622.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959193412.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959356494.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959729919.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439051694762.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439052059875.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439057698937.jpg">
+<meta property="og:updated_time" content="2018-12-10T06:41:27.961Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 推送">
 <meta name="twitter:description" content="iOS 推送推送原理APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。Apple推送机制可以概括为下图 图中Provider意思为供应商，就是后台服务器。如图我们可以将消息推送分为三个阶段。 第一阶段：Java后台把要发送的消息、目的iPhone的标识打包，发给APNS。第二阶段：APNS在自身的已注册Push服务的iPho">
-<meta name="twitter:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438865253253.jpg?Expires=1544410700&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=lKf%2FDGZXR%2Ftazn4C4hK7FlyClEw%3D">
+<meta name="twitter:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438865253253.jpg">
 
 
 
@@ -436,43 +436,43 @@
       
 
       
-        <h1 id="iOS-推送"><a href="#iOS-推送" class="headerlink" title="iOS 推送"></a>iOS 推送</h1><h2 id="推送原理"><a href="#推送原理" class="headerlink" title="推送原理"></a>推送原理</h2><p>APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。<br>Apple推送机制可以概括为下图<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438865253253.jpg?Expires=1544410700&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=lKf%2FDGZXR%2Ftazn4C4hK7FlyClEw%3D" alt=""></p>
+        <h1 id="iOS-推送"><a href="#iOS-推送" class="headerlink" title="iOS 推送"></a>iOS 推送</h1><h2 id="推送原理"><a href="#推送原理" class="headerlink" title="推送原理"></a>推送原理</h2><p>APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。<br>Apple推送机制可以概括为下图<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438865253253.jpg" alt=""></p>
 <p>图中Provider意思为供应商，就是后台服务器。<br>如图我们可以将消息推送分为三个阶段。</p>
-<p>第一阶段：Java后台把要发送的消息、目的iPhone的标识打包，发给APNS。<br>第二阶段：APNS在自身的已注册Push服务的iPhone列表中，查找有相应标识的iPhone，并把消息发到iPhone。<br>第三阶段：iPhone把发来的消息传递给相应的应用程序， 并且按照设定弹出Push通知。<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438866721811.jpg?Expires=1544407030&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=ioE7qrqpWIc2H9noA3rqWMKdaOs%3D" alt=""></p>
+<p>第一阶段：Java后台把要发送的消息、目的iPhone的标识打包，发给APNS。<br>第二阶段：APNS在自身的已注册Push服务的iPhone列表中，查找有相应标识的iPhone，并把消息发到iPhone。<br>第三阶段：iPhone把发来的消息传递给相应的应用程序， 并且按照设定弹出Push通知。<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438866721811.jpg" alt=""></p>
 <p><code>Provisioning profile</code> 配置文件<br><code>Device Token</code> 设备Token<br><code>App ID</code> 程序ID</p>
 <p>如图我们可以理解：<br>   1、首先是应用程序注册消息推送。</p>
 <p>   2、 IOS跟APNS Server要deviceToken。应用程序接受deviceToken。</p>
 <p>   3、应用程序将deviceToken发送给PUSH服务端程序。</p>
 <p>   4、 服务端程序向APNS服务发送消息。</p>
 <p>   5、APNS服务将消息发送给iPhone应用程序。<br>无论是iPhone客户端跟APNS,还是Provider和APNS都需要通过证书进行连接的。下面我介绍一下几种用到的证书。</p>
-<h2 id="集成极光推送"><a href="#集成极光推送" class="headerlink" title="集成极光推送"></a>集成极光推送</h2><h3 id="iOS-SDK概述"><a href="#iOS-SDK概述" class="headerlink" title="iOS SDK概述"></a>iOS SDK概述</h3><p><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438947787771.png?Expires=1544407050&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=sWoItVhiR2sr%2F9LBTigyuNjX%2BLg%3D" alt=""></p>
+<h2 id="集成极光推送"><a href="#集成极光推送" class="headerlink" title="集成极光推送"></a>集成极光推送</h2><h3 id="iOS-SDK概述"><a href="#iOS-SDK概述" class="headerlink" title="iOS SDK概述"></a>iOS SDK概述</h3><p><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438947787771.png" alt=""></p>
 <p>从上图可以看出，JPush iOS Push 包括 2 个部分，APNs 推送（代理），与 JPush 应用内消息。<br>红色部分是 APNs 推送，JPush 代理开发者的应用（需要基于开发者提供的应用证书），向苹果 APNs 服务器推送。由 APNs Server 推送到 iOS 设备上。<br>蓝色部分是 JPush 应用内推送部分，即 App 启动时，内嵌的 JPush SDK 会开启长连接到 JPush Server，从而 JPush Server 可以推送消息到 App 里。</p>
 <h4 id="APNs-通知"><a href="#APNs-通知" class="headerlink" title="APNs 通知"></a>APNs 通知</h4><p>APNs 通知：是指通过向 Apple APNs 服务器发送通知，到达 iOS 设备，由 iOS 系统提供展现的推送。用户可以通过 IOS 系统的 “设置” &gt;&gt; “通知” 进行设置，开启或者关闭某一个 App 的推送能力。<br>JPush iOS SDK 不负责 APNs 通知的展现，只是向 JPush 服务器端上传 Device Token 信息，JPush 服务器端代理开发者向 Apple APNs 推送通知。<br><a href="https://docs.jiguang.cn/jpush/client/iOS/ios_api/#apns" target="_blank" rel="noopener">获取 APNs 推送内容</a></p>
 <h4 id="应用内消息（自定义消息推送，如QQ）"><a href="#应用内消息（自定义消息推送，如QQ）" class="headerlink" title="应用内消息（自定义消息推送，如QQ）"></a>应用内消息（自定义消息推送，如QQ）</h4><p>应用内消息：JPush iOS SDK 提供的应用内消息功能，在 App 在前台时能够收到推送下来的消息。App 可使用此功能来做消息下发动作。<br>此消息不经过 APNs 服务器，完全由 JPush 提供功能支持。<br><a href="https://docs.jiguang.cn/jpush/client/iOS/ios_api/#_51" target="_blank" rel="noopener">获取应用内消息推送内容</a></p>
 <h3 id="iOS-集成指南"><a href="#iOS-集成指南" class="headerlink" title="iOS 集成指南"></a>iOS 集成指南</h3><h4 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h4><hr>
-<h6 id="创建应用-1"><a href="#创建应用-1" class="headerlink" title="创建应用 :"></a>创建应用 :</h6><p>点击［创建应用］按钮即可;<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438952747273.png?Expires=1544407083&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=%2BrO90V0Wrl0GFXWzgIEikvuMwQA%3D" alt=""></p>
+<h6 id="创建应用-1"><a href="#创建应用-1" class="headerlink" title="创建应用 :"></a>创建应用 :</h6><p>点击［创建应用］按钮即可;<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438952747273.png" alt=""></p>
 <h6 id="配置应用信息："><a href="#配置应用信息：" class="headerlink" title="配置应用信息："></a>配置应用信息：</h6><p>Step1： 基本信息：输入应用名称 (必填), 上传一个图标；<br>配置 Android 平台信息：填写应用包名, JPush 系统会在后台根据你输入的包名生成的推送的 Android 应用 Demo, 该 Demo 包含了该配置的信息;<br>Step2： 配置 iOS 平台信息：上传相关环境的推送证书，并填写和证书配套的密码；<br>Step3： 配置 WinPhone 平台信息：选择是否开启即可；</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注意：Android 的包名和 iOS 的证书一旦配置，不允许修改；</span><br><span class="line">如果测试应用配置有误，可删除应用重新创建（应用信息 - 编辑 - 删除）；</span><br><span class="line">如果是线上应用的某一个平台配置有误需要更改，可联系 support@jpush.cn 处理。</span><br></pre></td></tr></table></figure>
-<p><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438953349940.png?Expires=1544407238&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=QSOom9IMZyRfRf2XW%2BZk0RGuXlQ%3D" alt=""></p>
+<p><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438953349940.png" alt=""></p>
 <p>Step4： 信息配置完成后，查看应用信息如下：</p>
-<p><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438953504801.png?Expires=1544407300&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=McHNystDivADLf6S9f%2ByGD19MLs%3D" alt=""></p>
+<p><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438953504801.png" alt=""></p>
 <h5 id="应用管理"><a href="#应用管理" class="headerlink" title="应用管理"></a>应用管理</h5><hr>
-<p>点击［home］回到首页，可浏览所有应用的信息，点击应用名称或设置可查看应用详情，点击推送可去到发送通知页，编辑并推送通知，点击统计，可查看该应用的所有统计数据；<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955337492.png?Expires=1544407314&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=qIEv4V8OjxLBX3kQ0zGfZjUuxFU%3D" alt=""><br>应用详情如下<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955470163.png?Expires=1544407328&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=bPynJ1E3ioHm7pytSSPgWRH1JN8%3D" alt=""><br>应用设置如下<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955701622.png?Expires=1544407822&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=JEsSMeZR%2BeFdTto5oy%2FpalWzgvw%3D" alt=""></p>
+<p>点击［home］回到首页，可浏览所有应用的信息，点击应用名称或设置可查看应用详情，点击推送可去到发送通知页，编辑并推送通知，点击统计，可查看该应用的所有统计数据；<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955337492.png" alt=""><br>应用详情如下<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955470163.png" alt=""><br>应用设置如下<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438955701622.png" alt=""></p>
 <p>#####发送通知</p>
 <hr>
 <p>路径：选择应用－&gt;推送－&gt;发送通知<br>填写推送内容后点击页面最下方的［立即发送］按钮即可；<br>该功能对应 Rest API - Push - Notification</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：如果选择别名、标签、registrationID 推送，在输入一个值后需要回车确认。</span><br></pre></td></tr></table></figure>
-<p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959193412.png?Expires=1544407851&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=eIPnJHVLDeskl0yoIw203%2Bg%2BGGo%3D" alt=""></p>
-<p>Web 界面会弹出对话框, 提示是否发送, 选［发送吧］即可;<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959356494.png?Expires=1544407914&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=daCSCARzroJcRgBU1zlnPaDIpVc%3D" alt=""></p>
+<p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959193412.png" alt=""></p>
+<p>Web 界面会弹出对话框, 提示是否发送, 选［发送吧］即可;<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959356494.png" alt=""></p>
 <p>推送成果后，弹出对话框，点击［去看看］即可查看推送结果;</p>
-<p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959729919.png?Expires=1544407934&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=q9wJuiVeyVhhHUKJEUedmILSFoc%3D" alt=""></p>
+<p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438959729919.png" alt=""></p>
 <h5 id="推送历史"><a href="#推送历史" class="headerlink" title="推送历史"></a>推送历史</h5><hr>
 <p>路径：选择应用－&gt;推送－&gt;推送历史<br>在右边可以浏览推送的历史数据，包含推送时间，内容，类型，IOS 目标|成功，Android 目标|成功，Winphone 目标|成功，操作； 点开操作中的 i，可以展开消息详情，查看详细的推送内容。<br>jpush_web</p>
 <h6 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h6><ul>
 <li>类型包括：广播、tag、alias、Registration ID、segment</li>
-<li>操作包括：转发、详情、删除<h6 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h6>推送历史数据只保留一个月的统计信息。<br>详情如下：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439051694762.png?Expires=1544407950&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=h4P50mv1Zc85nPSKONzrQQ0w97A%3D" alt=""></li>
+<li>操作包括：转发、详情、删除<h6 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h6>推送历史数据只保留一个月的统计信息。<br>详情如下：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439051694762.png" alt=""></li>
 </ul>
-<p>统计示例：<img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439052059875.png?Expires=1544407971&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=hJE%2F%2BFVmqaJuWRTl51cZY%2FMRfnQ%3D" alt=""></p>
+<p>统计示例：<img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439052059875.png" alt=""></p>
 <p> <a href="https://docs.jiguang.cn/jpush/console/Instructions/#_14" target="_blank" rel="noopener">更多查看</a></p>
 <h4 id="配置工程"><a href="#配置工程" class="headerlink" title="配置工程"></a>配置工程</h4><hr>
 <h5 id="导入SDK"><a href="#导入SDK" class="headerlink" title="导入SDK"></a>导入SDK</h5><h6 id="选择-1：Cocoapods-导入"><a href="#选择-1：Cocoapods-导入" class="headerlink" title="选择 1：Cocoapods 导入"></a>选择 1：Cocoapods 导入</h6><p>通过 Cocoapods 下载地址：</p>
@@ -504,7 +504,7 @@
 <ul>
 <li>设置 Search Paths 下的 User Header Search Paths 和 Library Search Paths，比如 SDK 文件夹（默认为 lib ）与工程文件在同一级目录下，则都设置为 “$(SRCROOT)/{静态库所在文件夹名称}” 即可。<h5 id="Capabilities"><a href="#Capabilities" class="headerlink" title="Capabilities"></a>Capabilities</h5></li>
 </ul>
-<p>如使用 Xcode 8 及以上环境开发，请开启 Application Target 的 Capabilities-&gt;Push Notifications 选项，如图：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439057698937.jpg?Expires=1544407991&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=GXgCKGI1lUjN%2F4RZq7YGWObevj0%3D" alt=""></p>
+<p>如使用 Xcode 8 及以上环境开发，请开启 Application Target 的 Capabilities-&gt;Push Notifications 选项，如图：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439057698937.jpg" alt=""></p>
 <h5 id="允许-Xcode-7-支持-Http-传输方法"><a href="#允许-Xcode-7-支持-Http-传输方法" class="headerlink" title="允许 Xcode 7 支持 Http 传输方法"></a>允许 Xcode 7 支持 Http 传输方法</h5><p>如果您使用的是 2.1.9 及以上的版本则不需要配置此步骤<br>如果用的是 Xcode 7 或更新版本，需要在 App 项目的 plist 手动配置下 key 和值以支持 http 传输:<br>选择1：根据域名配置<br>在项目的 info.plist 中添加一个 Key：NSAppTransportSecurity，类型为字典类型。<br>然后给它添加一个 NSExceptionDomains，类型为字典类型；<br>把需要的支持的域添加给 NSExceptionDomains。其中 jpush.cn 作为 Key，类型为字典类型。<br>每个域下面需要设置 2 个属性：NSIncludesSubdomains、NSExceptionAllowsInsecureHTTPLoads。 两个属性均为 Boolean 类型，值分别为 YES、YES。<br>如图：</p>
 
       

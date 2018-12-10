@@ -106,15 +106,15 @@
 <meta property="og:site_name" content="天寒地裂">
 <meta property="og:description" content="iOS 数据埋点前言一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？ 首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。 那么我们怎么实现数据埋点呢？网上有很多数据埋点的SDK，如友">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152354449.png?Expires=1544408497&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=yQPbfhpMu8vcY%2FyujGLtieb6mIs%3D">
-<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152451383.png?Expires=1544408528&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=AHCHaE9wNgjaagQZlv%2FBQyDFDi8%3D">
-<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/A0F0740B-8870-4467-8440-8179DEE7D2F3.png?Expires=1544408554&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=lTK7j4pG%2BAiqeHuEEMlNXhFk32w%3D">
-<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/0119D617-3D8D-4165-AF53-B1DFB3F23C76.png?Expires=1544408580&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=mzoY5SwzEI%2FQcz7dITdARN5Nr4c%3D">
-<meta property="og:updated_time" content="2018-12-10T01:23:17.808Z">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152354449.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152451383.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/A0F0740B-8870-4467-8440-8179DEE7D2F3.png">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/0119D617-3D8D-4165-AF53-B1DFB3F23C76.png">
+<meta property="og:updated_time" content="2018-12-10T06:42:14.898Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 数据埋点">
 <meta name="twitter:description" content="iOS 数据埋点前言一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？ 首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。 那么我们怎么实现数据埋点呢？网上有很多数据埋点的SDK，如友">
-<meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152354449.png?Expires=1544408497&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=yQPbfhpMu8vcY%2FyujGLtieb6mIs%3D">
+<meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152354449.png">
 
 
 
@@ -429,7 +429,7 @@
 <p>首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。</p>
 <p>那么我们怎么实现数据埋点呢？<br>网上有很多数据埋点的SDK，如友盟、极光、腾讯的MTA等。下面我将举例说明一下极光的埋点统计。</p>
 <h2 id="极光统计-iOS-SDK-集成"><a href="#极光统计-iOS-SDK-集成" class="headerlink" title="极光统计 iOS SDK 集成"></a>极光统计 iOS SDK 集成</h2><h3 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h3><hr>
-<p>创建成功后自动生成 AppKey 用以标识该应用。<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152354449.png?Expires=1544408497&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=yQPbfhpMu8vcY%2FyujGLtieb6mIs%3D" alt=""><br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152451383.png?Expires=1544408528&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=AHCHaE9wNgjaagQZlv%2FBQyDFDi8%3D" alt=""></p>
+<p>创建成功后自动生成 AppKey 用以标识该应用。<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152354449.png" alt=""><br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152451383.png" alt=""></p>
 <h3 id="SDK导入"><a href="#SDK导入" class="headerlink" title="SDK导入"></a>SDK导入</h3><hr>
 <h4 id="选择1：Cocoapods导入"><a href="#选择1：Cocoapods导入" class="headerlink" title="选择1：Cocoapods导入"></a>选择1：Cocoapods导入</h4><ul>
 <li>通过Cocoapods下载地址：</li>
@@ -507,7 +507,7 @@ event.method = @&quot;login type&quot;;
 event.extra = @{@&quot;custom key1&quot;:@&quot;custom value&quot;};
 
 [JANALYTICSService eventRecord:event];
-</code></pre><p>极光运营统计图，可登录极光后找到程序应用后，找到统计界面打开查看登录统计，如下图：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/A0F0740B-8870-4467-8440-8179DEE7D2F3.png?Expires=1544408554&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=lTK7j4pG%2BAiqeHuEEMlNXhFk32w%3D" alt="A0F0740B-8870-4467-8440-8179DEE7D2F3"></p>
+</code></pre><p>极光运营统计图，可登录极光后找到程序应用后，找到统计界面打开查看登录统计，如下图：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/A0F0740B-8870-4467-8440-8179DEE7D2F3.png" alt="A0F0740B-8870-4467-8440-8179DEE7D2F3"></p>
 <h5 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h5><pre><code>登录事件模型中扩展参数中不能使用以下 key 值：
 login_method
 login_success
@@ -532,7 +532,7 @@ login_success
 }
 </code></pre></li>
 </ul>
-<p>极光运营统计图，可登录极光后找到程序应用后，找到统计界面打开查看登录统计，如下图：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/0119D617-3D8D-4165-AF53-B1DFB3F23C76.png?Expires=1544408580&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=mzoY5SwzEI%2FQcz7dITdARN5Nr4c%3D" alt="0119D617-3D8D-4165-AF53-B1DFB3F23"></p>
+<p>极光运营统计图，可登录极光后找到程序应用后，找到统计界面打开查看登录统计，如下图：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/0119D617-3D8D-4165-AF53-B1DFB3F23C76.png" alt="0119D617-3D8D-4165-AF53-B1DFB3F23"></p>
 <h4 id="浏览事件模型"><a href="#浏览事件模型" class="headerlink" title="浏览事件模型"></a>浏览事件模型</h4><ul>
 <li>JANALYTICSBrowseEvent<br>该模型是浏览事件模型，可以设置参数进行数据上报。<br>参数说明：</li>
 </ul>
