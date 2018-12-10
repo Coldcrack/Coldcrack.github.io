@@ -109,7 +109,7 @@
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/35D6BEB9-C077-4B8C-AB91-102D8FD3979D.png">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/FAE2A4DE-A369-4407-989F-E47CE41B5334.png">
 <meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/9EB17B23-6E19-4014-BA8B-E9DB4486FDF8.png">
-<meta property="og:updated_time" content="2018-09-18T07:42:02.000Z">
+<meta property="og:updated_time" content="2018-12-07T06:41:23.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CocoaPods制作第三方代码库，公共远程库">
 <meta name="twitter:description" content="CocoaPods制作第三方代码库，公共远程库前言Cocoapods 是个很好用的三方库管理工具，一直用的别人的三方库，突然想自己也搞一个三方库试试，查了许多方法，终于成功了，下面记录方法步骤。 环境安装首先我们需要安装CocoaPods环境，之前写过CocoaPods环境安装，没安装的同学可以跟着安装下。最好安装最新的环境，否则执行下边步骤可能会出现错误。 制作本地库打开目录，cd到指定目录，输">
@@ -439,7 +439,8 @@
 <pre><code>Configuring LFToolPod template.
 ! Before you can create a new library we need to setup your git credentials.
 </code></pre><p>首先设置邮箱账号</p>
-<pre><code>What is your email?
+<pre><code> What is your email?
+#设置邮箱
 </code></pre><p>然后回答以下问题</p>
 <pre><code>------------------------------
 
@@ -451,29 +452,31 @@ If this is your first time we recommend running through with the guide:
 
 
 What platform do you want to use?? [ iOS / macOS ]
+#你要使用哪个平台？
  &gt; ios 
 
-Possible answers are [ iOS / macOS ]
- &gt; ios
-
 What language do you want to use?? [ Swift / ObjC ]
+#你要使用哪种语言？
  &gt; objc
 
 Would you like to include a demo application with your library? [ Yes / No ]
+#库中是否包含一个实例程序？
  &gt; yes
 
 Which testing frameworks will you use? [ Specta / Kiwi / None ]
+#你要使用哪个测试框架？（没有就写None）
  &gt; none
 
 Would you like to do view based testing? [ Yes / No ]
+#是否要UI测试？（我一直都是NO，没有测试过）
  &gt; no
 
 What is your class prefix?
+#类名前缀是什么？(自定义 我填名字缩写)
  &gt; HX_
 
 Running pod install on your new library.
-</code></pre><p>问题意思如下：<br>1.你要使用哪个平台？iOS<br>2.你要使用哪种语言？<br>3.库中是否包含一个实例程序？（一般选择示例程序）yes<br>4.你要使用哪个测试框架？（没有就写None）<br>5.是否要UI测试？（我一直都是NO，没有测试过）<br>6.类名前缀是什么？(自定义 我填名字缩写)</p>
-<p>接下来会自动执行pod install。</p>
+</code></pre><p>接下来会自动执行pod install。</p>
 <pre><code>Analyzing dependencies
 Fetching podspec for `LFToolPod` from `../`
 Downloading dependencies
@@ -509,8 +512,11 @@ To learn more about creating a new pod, see `http://guides.cocoapods.org/making/
 # To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
  Pod::Spec.new do |s|
+  #库名
   s.name             = &apos;LFToolPod&apos;
+  #库版本
   s.version          = &apos;1.0.0&apos;
+  #库简短描述
   s.summary          = &apos;A short description of LFToolPod.&apos;
 
 # This description is used to generate tags and improve search results.
@@ -518,28 +524,36 @@ To learn more about creating a new pod, see `http://guides.cocoapods.org/making/
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don&apos;t worry about the indent, CocoaPods strips it!
-
+  #库详细描述
   s.description      = &lt;&lt;-DESC
 TODO: Add long description of the pod here.
                        DESC
-
+  #库介绍主页地址
   s.homepage         = &apos;https://github.com/Coldcrack/LFToolPod&apos;
   # s.screenshots     = &apos;www.example.com/screenshots_1&apos;, &apos;www.example.com/screenshots_2&apos;
+  #库开源许可
   s.license          = { :type =&gt; &apos;MIT&apos;, :file =&gt; &apos;LICENSE&apos; }
+  #作者信息
   s.author           = { &apos;Coldcrack&apos; =&gt; &apos;13225542075@163.com&apos; }
+  #源码git地址
   s.source           = { :git =&gt; &apos;https://github.com/Coldcrack/LFToolPod.git&apos;, :tag =&gt; s.version.to_s }
   # s.social_media_url = &apos;https://twitter.com/&lt;TWITTER_USERNAME&gt;&apos;
-
+  #库依赖系统版本
   s.ios.deployment_target = &apos;8.0&apos;
-
+  #“*” 表示匹配所有文件
+  #“*.{h,m}” 表示匹配所有以.h和.m结尾的文件
+  #“**” 表示匹配所有子目录
+  #源码文件配置
   s.source_files = &apos;LFToolPod/Classes/**/*&apos;
-
+  #资源文件配置
   # s.resource_bundles = {
   #   &apos;LFToolPod&apos; =&gt; [&apos;LFToolPod/Assets/*.png&apos;]
   # }
-
+  #源码头文件配置
   # s.public_header_files = &apos;Pod/Classes/**/*.h&apos;
+  #系统框架依赖
   # s.frameworks = &apos;UIKit&apos;, &apos;MapKit&apos;
+  #依赖第三方库
   # s.dependency &apos;AFNetworking&apos;, &apos;~&gt; 2.3&apos;
 end
 </code></pre><p>Specs Repo：是Git库存放Specs文件，它包含了所有可用的第三方库。每个库都会有独立的文件夹，每个版本以独立的子文件夹保存。文件夹中只有一个描述文件，也就是Spec。<br>Code：就是我们自己库的源代码。<br>Code Repo：就是Git库存放源代码的地方。</p>
@@ -548,7 +562,7 @@ end
 <h4 id="1-提交源代码到git"><a href="#1-提交源代码到git" class="headerlink" title="1.提交源代码到git"></a>1.提交源代码到git</h4><p>我们在github上建立个远程库用来存放代码，也可以是码云什么的</p>
 <p><img src="http://oprlyd36a.bkt.clouddn.com/FAE2A4DE-A369-4407-989F-E47CE41B5334.png" alt="FAE2A4DE-A369-4407-989F-E47CE41B5334"></p>
 <p>error 是库名已存在，让再换一个</p>
-<pre><code>git remote add origin https://github.com/Coldcrack/LFToolPod.git
+<pre><code>git remote add origin https://github.com/Coldcrack/LFToolPod
 git add .
 git commit -a -m &quot;1.0.0&quot;
 git tag 1.0.0
@@ -682,8 +696,8 @@ LFToolPod.podspec passed validation.
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/26/Swift-Dictionary/" rel="prev" title="Swift学习之路-字典的定义与使用">
-                Swift学习之路-字典的定义与使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/26/Swift-tableView/" rel="prev" title="Swift学习之路-tableView的代码实现">
+                Swift学习之路-tableView的代码实现 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -768,7 +782,7 @@ LFToolPod.podspec passed validation.
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -878,7 +892,7 @@ LFToolPod.podspec passed validation.
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共19.4k字</span>
+  <span class="post-count">博客全站共22.4k字</span>
 </div>
         
 <div class="busuanzi-count">

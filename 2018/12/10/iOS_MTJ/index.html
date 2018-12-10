@@ -87,7 +87,7 @@
 
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -98,27 +98,23 @@
 
 
 
-<meta name="description" content="Hexo Next主题集成Gittalk前言本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见demo 配置GittalkRegister Application在GitHub注册新应用登录GitHub-&amp;gt;点击头像-&amp;gt;Setting-&amp;gt;Deve">
-<meta name="keywords" content="Hexo">
+<meta name="description" content="iOS 数据埋点前言一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？ 首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。 那么我们怎么实现数据埋点呢？网上有很多数据埋点的SDK，如友">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Next主题集成Gittalk">
-<meta property="og:url" content="http://www.coldcrack.me/2018/07/18/Next_Gittalk/index.html">
+<meta property="og:title" content="iOS 数据埋点">
+<meta property="og:url" content="http://www.coldcrack.me/2018/12/10/iOS_MTJ/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="Hexo Next主题集成Gittalk前言本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见demo 配置GittalkRegister Application在GitHub注册新应用登录GitHub-&amp;gt;点击头像-&amp;gt;Setting-&amp;gt;Deve">
+<meta property="og:description" content="iOS 数据埋点前言一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？ 首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。 那么我们怎么实现数据埋点呢？网上有很多数据埋点的SDK，如友">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/B2E512E2-B938-41EE-B619-03C974F55231.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/7CF4B19B-16DA-40B7-AECE-79179033A54C.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/974DB528-DC1E-411D-AFEE-51ED3488BAA6.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/895B2089-7F11-44EB-A539-BF9383A54C16.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/094A45469CB62B803C0439D95F3AE42C.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/E510EF3AA8146A41FA4D490FBE9F8045.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/AA639D24515DF1799BFC5DE1027C0A9C.png">
-<meta property="og:image" content="http://oprlyd36a.bkt.clouddn.com/F86EABB8-8AC8-4298-9B56-C117E8947E12.png">
-<meta property="og:updated_time" content="2018-09-14T03:02:07.000Z">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152354449.png?Expires=1544408497&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=yQPbfhpMu8vcY%2FyujGLtieb6mIs%3D">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152451383.png?Expires=1544408528&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=AHCHaE9wNgjaagQZlv%2FBQyDFDi8%3D">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/A0F0740B-8870-4467-8440-8179DEE7D2F3.png?Expires=1544408554&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=lTK7j4pG%2BAiqeHuEEMlNXhFk32w%3D">
+<meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/0119D617-3D8D-4165-AF53-B1DFB3F23C76.png?Expires=1544408580&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=mzoY5SwzEI%2FQcz7dITdARN5Nr4c%3D">
+<meta property="og:updated_time" content="2018-12-10T01:23:17.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo Next主题集成Gittalk">
-<meta name="twitter:description" content="Hexo Next主题集成Gittalk前言本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见demo 配置GittalkRegister Application在GitHub注册新应用登录GitHub-&amp;gt;点击头像-&amp;gt;Setting-&amp;gt;Deve">
-<meta name="twitter:image" content="http://oprlyd36a.bkt.clouddn.com/B2E512E2-B938-41EE-B619-03C974F55231.png">
+<meta name="twitter:title" content="iOS 数据埋点">
+<meta name="twitter:description" content="iOS 数据埋点前言一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？ 首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。 那么我们怎么实现数据埋点呢？网上有很多数据埋点的SDK，如友">
+<meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152354449.png?Expires=1544408497&OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&Signature=yQPbfhpMu8vcY%2FyujGLtieb6mIs%3D">
 
 
 
@@ -148,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://www.coldcrack.me/2018/07/18/Next_Gittalk/"/>
+  <link rel="canonical" href="http://www.coldcrack.me/2018/12/10/iOS_MTJ/"/>
 
 
 
 
 
-  <title>Hexo Next主题集成Gittalk | 天寒地裂</title>
+  <title>iOS 数据埋点 | 天寒地裂</title>
   
 
 
@@ -329,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.coldcrack.me/2018/07/18/Next_Gittalk/">
+    <link itemprop="mainEntityOfPage" href="http://www.coldcrack.me/2018/12/10/iOS_MTJ/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="天寒地裂">
@@ -346,7 +342,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo Next主题集成Gittalk</h1>
+          <h1 class="post-title" itemprop="name headline">iOS 数据埋点</h1>
         
 
         <div class="post-meta">
@@ -358,8 +354,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-18T23:32:11+08:00">
-                2018-07-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T09:19:31+08:00">
+                2018-12-10
               </time>
             
 
@@ -381,8 +377,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -398,7 +394,7 @@
 
           
           
-             <span id="/2018/07/18/Next_Gittalk/" class="leancloud_visitors" data-flag-title="Hexo Next主题集成Gittalk">
+             <span id="/2018/12/10/iOS_MTJ/" class="leancloud_visitors" data-flag-title="iOS 数据埋点">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -434,54 +430,170 @@
       
 
       
-        <h1 id="Hexo-Next主题集成Gittalk"><a href="#Hexo-Next主题集成Gittalk" class="headerlink" title="Hexo Next主题集成Gittalk"></a>Hexo Next主题集成Gittalk</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见<a href="https://gitalk.github.io" target="_blank" rel="noopener">demo</a></p>
-<h2 id="配置Gittalk"><a href="#配置Gittalk" class="headerlink" title="配置Gittalk"></a>配置Gittalk</h2><h3 id="Register-Application"><a href="#Register-Application" class="headerlink" title="Register Application"></a>Register Application</h3><p>在GitHub注册新应用<br>登录GitHub-&gt;点击头像-&gt;Setting-&gt;Developer settings-&gt;OAuth Apps-&gt;New OAuth App<br>顺序如图<br><img src="http://oprlyd36a.bkt.clouddn.com/B2E512E2-B938-41EE-B619-03C974F55231.png" alt="B2E512E2-B938-41EE-B619-03C974F55231"><br>图(1)<br><img src="http://oprlyd36a.bkt.clouddn.com/7CF4B19B-16DA-40B7-AECE-79179033A54C.png" alt="7CF4B19B-16DA-40B7-AECE-79179033A54"><br>图(2)<br><img src="http://oprlyd36a.bkt.clouddn.com/974DB528-DC1E-411D-AFEE-51ED3488BAA6.png" alt="974DB528-DC1E-411D-AFEE-51ED3488BAA6"><br>Application name： # 应用名称，随意<br>Homepage URL： # 网站URL，如<code>https://coldcrack.github.io</code><br>Application description # 描述，随意<br>Authorization callback URL：# 网站URL，<code>https://coldcrack.github.io</code><br>注册完成后，页面跳转如下<br><img src="http://oprlyd36a.bkt.clouddn.com/895B2089-7F11-44EB-A539-BF9383A54C16.png" alt="895B2089-7F11-44EB-A539-BF9383A54"><br>Client ID和Client Secret在在主题配置中有用,保留。</p>
-<h3 id="gitalk-swig"><a href="#gitalk-swig" class="headerlink" title="gitalk.swig"></a>gitalk.swig</h3><p>新建<code>/layout/_third-party/comments/gitalk.swig</code>文件，并添加内容：</p>
-<pre><code>{% if page.comments && theme.gitalk.enable %}
-      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-      <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-       <script type="text/javascript">
-            var gitalk = new Gitalk({
-              clientID: '{{ theme.gitalk.ClientID }}',
-              clientSecret: '{{ theme.gitalk.ClientSecret }}',
-              repo: '{{ theme.gitalk.repo }}',
-              owner: '{{ theme.gitalk.githubID }}',
-              admin: ['{{ theme.gitalk.adminUser }}'],
-              id: location.pathname,
-              distractionFreeMode: '{{ theme.gitalk.distractionFreeMode }}'
-            })
-            gitalk.render('gitalk-container')           
-           </script>
-    {% endif %}
-</code></pre><h3 id="comments-swig"><a href="#comments-swig" class="headerlink" title="comments.swig"></a>comments.swig</h3><p>修改<code>/layout/_partials/comments.swig</code>，添加内容如下，与前面的<code>elseif</code>同一级别上：</p>
-<pre><code>{% elseif theme.gitalk.enable %}
- &lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;
-</code></pre><h3 id="index-swig"><a href="#index-swig" class="headerlink" title="index.swig"></a>index.swig</h3><p>修改<code>layout/_third-party/comments/index.swig</code>，在最后一行添加内容：</p>
-<pre><code>{% include 'gitalk.swig' %}
-</code></pre><p>###gitalk.styl<br>新建<code>/source/css/_common/components/third-party/gitalk.styl</code>文件，添加内容：</p>
-<pre><code>.gt-header a, .gt-comments a, .gt-popup a
-  border-bottom: none;
-.gt-container .gt-popup .gt-action.is--active:before
-  top: 0.7em;
-</code></pre><h3 id="third-party-styl"><a href="#third-party-styl" class="headerlink" title="third-party.styl"></a>third-party.styl</h3><p>修改<code>/source/css/_common/components/third-party/third-party.styl</code>，在最后一行上添加内容，引入样式：</p>
-<pre><code>@import &quot;gitalk&quot;;
-</code></pre><h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>在主题配置文件<code>next/_config.yml</code>中添加如下内容：</p>
-<pre><code>gitalk:
-  enable: true
-  githubID: github帐号  # 例：asdfv1929   
-  repo: 仓库名称   # 例：asdfv1929.github.io
-  ClientID: Client ID
-  ClientSecret: Client Secret
-  adminUser: github帐号 #指定可初始化评论账户
-  labels: &apos;gitalk&apos; #GitHub issues的标签
-  distractionFreeMode: true
-</code></pre><p>以上就是NexT中添加gitalk评论的配置，博客上传到GitHub上后，打开页面进入某一博客内容下，就可看到评论处。</p>
-<h2 id="Tips-博主踩过的坑"><a href="#Tips-博主踩过的坑" class="headerlink" title="Tips:博主踩过的坑"></a>Tips:博主踩过的坑</h2><h3 id="未找到相关的issue评论，请联系xxx初始化创建"><a href="#未找到相关的issue评论，请联系xxx初始化创建" class="headerlink" title="未找到相关的issue评论，请联系xxx初始化创建"></a>未找到相关的issue评论，请联系xxx初始化创建</h3><p>这个是博主未给文章评论初始化，只用让博主点击登录GitHub账号即可<br><img src="http://oprlyd36a.bkt.clouddn.com/094A45469CB62B803C0439D95F3AE42C.png" alt="094A45469CB62B803C0439D95F3AE42"></p>
-<p>如果博主点击GitHub登录会返回到首页，说明主题配置有问题，查看 <code>_config.yml</code>文件中的<code>gittalk</code>是否配置正确。</p>
-<h3 id="Error-Not-Found"><a href="#Error-Not-Found" class="headerlink" title="Error: Not Found."></a>Error: Not Found.</h3><p><img src="http://oprlyd36a.bkt.clouddn.com/E510EF3AA8146A41FA4D490FBE9F8045.png" alt="E510EF3AA8146A41FA4D490FBE9F8045"></p>
-<p>未找到repo。查看 <code>_config.yml</code>文件中的<code>gittalk</code>中repo是否配置正确，可以是博客所在的仓库，也可以新建一个仓库。</p>
-<h3 id="Error-Validation-Failed"><a href="#Error-Validation-Failed" class="headerlink" title="Error: Validation Failed."></a>Error: Validation Failed.</h3><p><img src="http://oprlyd36a.bkt.clouddn.com/AA639D24515DF1799BFC5DE1027C0A9C.png" alt="AA639D24515DF1799BFC5DE1027C0A9"></p>
-<p>验证失败，最可能的就是 查看 <code>_config.yml</code>文件中的<code>gittalk</code>的labels这里，我们新建文章后同时要在GitHub中新建一个issue用来保存评论留言，而每个issue需要做个label标签(如下图)，GitHub对这个lebel标签做了限制，长度不超过50。我们的文章文件名只要带中文，就会超过50字节。最简单的方法是将文章文件名改为英文或数字拼接的。你也可以查看<a href="https://github.com/gitalk/gitalk/issues/102" target="_blank" rel="noopener">#102</a>其他博主是如何修改的。<br><img src="http://oprlyd36a.bkt.clouddn.com/F86EABB8-8AC8-4298-9B56-C117E8947E12.png" alt="F86EABB8-8AC8-4298-9B56-C117E8947E12"></p>
+        <h1 id="iOS-数据埋点"><a href="#iOS-数据埋点" class="headerlink" title="iOS 数据埋点"></a>iOS 数据埋点</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？</p>
+<p>首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。</p>
+<p>那么我们怎么实现数据埋点呢？<br>网上有很多数据埋点的SDK，如友盟、极光、腾讯的MTA等。下面我将举例说明一下极光的埋点统计。</p>
+<h2 id="极光统计-iOS-SDK-集成"><a href="#极光统计-iOS-SDK-集成" class="headerlink" title="极光统计 iOS SDK 集成"></a>极光统计 iOS SDK 集成</h2><h3 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h3><hr>
+<p>创建成功后自动生成 AppKey 用以标识该应用。<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152354449.png?Expires=1544408497&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=yQPbfhpMu8vcY%2FyujGLtieb6mIs%3D" alt=""><br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152451383.png?Expires=1544408528&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=AHCHaE9wNgjaagQZlv%2FBQyDFDi8%3D" alt=""></p>
+<h3 id="SDK导入"><a href="#SDK导入" class="headerlink" title="SDK导入"></a>SDK导入</h3><hr>
+<h4 id="选择1：Cocoapods导入"><a href="#选择1：Cocoapods导入" class="headerlink" title="选择1：Cocoapods导入"></a>选择1：Cocoapods导入</h4><ul>
+<li>通过Cocoapods下载地址：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &apos;JAnalytics&apos;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果需要安装指定版本则使用以下方式（以1.2.0版本为例）：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &apos;JAnalytics&apos;, &apos;1.2.0&apos;</span><br></pre></td></tr></table></figure>
+<h4 id="选择2：手动导入"><a href="#选择2：手动导入" class="headerlink" title="选择2：手动导入"></a>选择2：手动导入</h4><ul>
+<li>在极光官网下载最新SDK</li>
+<li>解压压缩包，将Lib下的所有文件复制到工程中</li>
+<li>增加相关的framework依赖<ul>
+<li>UIKit</li>
+<li>SystemConfiguration</li>
+<li>CoreTelephony</li>
+<li>CoreGraphics</li>
+<li>Security</li>
+<li>Foundation</li>
+<li>CoreLocation</li>
+<li>CoreFoundation</li>
+<li>CFNetwork</li>
+<li>libz.tbd</li>
+<li>libresolv.tbd</li>
+</ul>
+</li>
+<li>可以开始使用统计SDK了！</li>
+</ul>
+<h3 id="添加头文件"><a href="#添加头文件" class="headerlink" title="添加头文件"></a>添加头文件</h3><hr>
+<p>请将以下代码添加到 AppDelegate.m 引用头文件的位置</p>
+<pre><code>// 引入JAnalytics功能所需头文件
+#import &quot;JANALYTICSService.h&quot;
+// 如果需要使用idfa功能所需要引入的头文件（可选）
+#import &lt;AdSupport/AdSupport.h&gt;
+</code></pre><h3 id="添加初始化代码"><a href="#添加初始化代码" class="headerlink" title="添加初始化代码"></a>添加初始化代码</h3><p>请将以下代码添加到 <code>-(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions</code></p>
+<pre><code>JANALYTICSLaunchConfig * config = [[JANALYTICSLaunchConfig alloc] init];
+
+config.appKey = @&quot;your appkey&quot;;
+
+config.channel = @&quot;channel&quot;;
+
+[JANALYTICSService setupWithConfig:config];
+</code></pre><h3 id="iOS-SDK-API"><a href="#iOS-SDK-API" class="headerlink" title="iOS SDK API"></a>iOS SDK API</h3><hr>
+<h4 id="登录事件模型"><a href="#登录事件模型" class="headerlink" title="登录事件模型"></a>登录事件模型</h4><ul>
+<li>JANALYTICSLoginEvent<br>该模型是登录事件模型，可以设置参数进行数据上报。<br>参数说明：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contentID</td>
+<td>NSString</td>
+<td>登录方式(非空)</td>
+</tr>
+<tr>
+<td>name</td>
+<td>BOOL</td>
+<td>内容名称(非空)</td>
+</tr>
+</tbody>
+</table>
+<p>调用示例:</p>
+<pre><code>JANALYTICSLoginEvent * event = [[JANALYTICSLoginEvent alloc] init];
+
+event.success = YES;
+
+event.method = @&quot;login type&quot;;
+
+event.extra = @{@&quot;custom key1&quot;:@&quot;custom value&quot;};
+
+[JANALYTICSService eventRecord:event];
+</code></pre><p>极光运营统计图，可登录极光后找到程序应用后，找到统计界面打开查看登录统计，如下图：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/A0F0740B-8870-4467-8440-8179DEE7D2F3.png?Expires=1544408554&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=lTK7j4pG%2BAiqeHuEEMlNXhFk32w%3D" alt="A0F0740B-8870-4467-8440-8179DEE7D2F3"></p>
+<h5 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h5><pre><code>登录事件模型中扩展参数中不能使用以下 key 值：
+login_method
+login_success
+此类 key 已被模型使用，如果使用则会导致统计到的数据不准确.
+</code></pre><h4 id="SDK-页面流统计"><a href="#SDK-页面流统计" class="headerlink" title="SDK 页面流统计"></a>SDK 页面流统计</h4><p>+(void)startLogPageView:(NSString *)pageName</p>
+<ul>
+<li>接口说明：<br>页面流统计开始接口，建议在ViewControler的viewDidAppear:方法中调用</li>
+<li>参数说明：<br>pageName：要开始统计的页面名</li>
+<li><p>调用示例：</p>
+<pre><code>- (void)viewDidAppear:(BOOL)animated {
+    [JANALYTICSService startLogPageView:@&quot;first_page_flow&quot;];
+}
+</code></pre></li>
+</ul>
+<p>+(void)stopLogPageView:(NSString *)pageName</p>
+<ul>
+<li>接口说明：<br>页面流统计结束接口，建议在ViewControler的viewDidDisappear:方法中调用；结束后，默认即时上报此页面。可通过[setFrequency:]方法更改为周期性上报策略</li>
+<li>参数说明：<br>pageName：要结束统计的页面名</li>
+<li><p>调用示例：</p>
+<pre><code>- (void)viewDidDisappear:(BOOL)animated {
+    [JANALYTICSService stopLogPageView:@&quot;first_page_flow&quot;];
+}
+</code></pre></li>
+</ul>
+<p>极光运营统计图，可登录极光后找到程序应用后，找到统计界面打开查看登录统计，如下图：<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/0119D617-3D8D-4165-AF53-B1DFB3F23C76.png?Expires=1544408580&amp;OSSAccessKeyId=TMP.AQGpJ0cegqGZ3pUU2INB3OV75T1qf0--zvkwvncgBanjjsLdY6Ma8kllKos7MC4CFQCDGyu8v8QfdNZN-jvzq02dWuFciwIVAMYc497npJ7EUNdlSC_nZRodNH_J&amp;Signature=mzoY5SwzEI%2FQcz7dITdARN5Nr4c%3D" alt="0119D617-3D8D-4165-AF53-B1DFB3F23"></p>
+<h4 id="浏览事件模型"><a href="#浏览事件模型" class="headerlink" title="浏览事件模型"></a>浏览事件模型</h4><ul>
+<li>JANALYTICSBrowseEvent<br>该模型是浏览事件模型，可以设置参数进行数据上报。<br>参数说明：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contentID</td>
+<td>NSString</td>
+<td>浏览内容id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>NSString</td>
+<td>内容名称(非空)</td>
+</tr>
+<tr>
+<td>type</td>
+<td>NSString</td>
+<td>内容类型</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>CGFloat</td>
+<td>浏览时长</td>
+</tr>
+</tbody>
+</table>
+<p>调用示例:</p>
+<pre><code>JANALYTICSBrowseEvent * event = [[JANALYTICSBrowseEvent alloc] init];
+
+event.name = @&quot;browse name&quot;;
+
+event.type = @&quot;browse type&quot;;
+
+event.contentID = @&quot;browse id&quot;;
+
+event.duration = 1.2;
+
+event.extra = @{@&quot;custom key1&quot;:@&quot;custom value&quot;};
+
+[JANALYTICSService eventRecord:event];
+</code></pre><h5 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h5><pre><code>浏览事件模型中扩展参数中不能使用以下 key 值：
+browse_content_id
+browse_name
+browse_type
+browse_duration
+此类 key 已被模型使用，如果使用则会导致统计到的数据不准确.
+</code></pre><p> 极光运营统计图，可登录极光后找到程序应用后，找到统计界面打开查看登录统计，如下图：</p>
+<h3 id="更多API"><a href="#更多API" class="headerlink" title="更多API"></a>更多API</h3><p>其他 API 的使用方法请参考接口文档：<a href="https://docs.jiguang.cn/janalytics/client/ios_api/" target="_blank" rel="noopener">iOS SDK API</a></p>
 
       
     </div>
@@ -516,7 +628,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i> iOS</a>
           
         </div>
       
@@ -529,8 +641,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/18/MacforHexoBlogNexTConfig/" rel="next" title="Mac搭建Hexo博客及NexT主题配置优化">
-                <i class="fa fa-chevron-left"></i> Mac搭建Hexo博客及NexT主题配置优化
+              <a href="/2018/12/06/iOS_JPN/" rel="next" title="iOS 推送">
+                <i class="fa fa-chevron-left"></i> iOS 推送
               </a>
             
           </div>
@@ -538,10 +650,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/18/NexT_DaoVoice/" rel="prev" title="Hexo NexT主题集成DaoVoice在线联系">
-                Hexo NexT主题集成DaoVoice在线联系 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -690,7 +798,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-Next主题集成Gittalk"><span class="nav-number">1.</span> <span class="nav-text">Hexo Next主题集成Gittalk</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Gittalk"><span class="nav-number">1.2.</span> <span class="nav-text">配置Gittalk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Register-Application"><span class="nav-number">1.2.1.</span> <span class="nav-text">Register Application</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitalk-swig"><span class="nav-number">1.2.2.</span> <span class="nav-text">gitalk.swig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#comments-swig"><span class="nav-number">1.2.3.</span> <span class="nav-text">comments.swig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#index-swig"><span class="nav-number">1.2.4.</span> <span class="nav-text">index.swig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#third-party-styl"><span class="nav-number">1.2.5.</span> <span class="nav-text">third-party.styl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config-yml"><span class="nav-number">1.2.6.</span> <span class="nav-text">_config.yml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tips-博主踩过的坑"><span class="nav-number">1.3.</span> <span class="nav-text">Tips:博主踩过的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#未找到相关的issue评论，请联系xxx初始化创建"><span class="nav-number">1.3.1.</span> <span class="nav-text">未找到相关的issue评论，请联系xxx初始化创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error-Not-Found"><span class="nav-number">1.3.2.</span> <span class="nav-text">Error: Not Found.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error-Validation-Failed"><span class="nav-number">1.3.3.</span> <span class="nav-text">Error: Validation Failed.</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS-数据埋点"><span class="nav-number">1.</span> <span class="nav-text">iOS 数据埋点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#极光统计-iOS-SDK-集成"><span class="nav-number">1.2.</span> <span class="nav-text">极光统计 iOS SDK 集成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建应用"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SDK导入"><span class="nav-number">1.2.2.</span> <span class="nav-text">SDK导入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#选择1：Cocoapods导入"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">选择1：Cocoapods导入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择2：手动导入"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">选择2：手动导入</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加头文件"><span class="nav-number">1.2.3.</span> <span class="nav-text">添加头文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加初始化代码"><span class="nav-number">1.2.4.</span> <span class="nav-text">添加初始化代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS-SDK-API"><span class="nav-number">1.2.5.</span> <span class="nav-text">iOS SDK API</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#登录事件模型"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">登录事件模型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意："><span class="nav-number">1.2.5.1.1.</span> <span class="nav-text">注意：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SDK-页面流统计"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">SDK 页面流统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览事件模型"><span class="nav-number">1.2.5.3.</span> <span class="nav-text">浏览事件模型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意：-1"><span class="nav-number">1.2.5.3.1.</span> <span class="nav-text">注意：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更多API"><span class="nav-number">1.2.6.</span> <span class="nav-text">更多API</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
