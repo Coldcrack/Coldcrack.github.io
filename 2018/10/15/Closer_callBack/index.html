@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="天寒地裂">
 <meta property="og:description" content="闭包传值swift开发中常常遇到控制之间传值的问题,在oc中我们可以用通知、代理、block来传值。在oc的block传值很方便，缺点就是只能回调传值，如果要传多个控制器只能用通知了。而在swift中我们也可以用通知、代理来传值,但那样太麻烦了，swift有个很方便的回调叫闭包(closure)。swift闭包和oc的block很类似，它可以做方法的回调也可以用来做两个界面之间的传值，也可以叫两个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-10T07:13:46.454Z">
+<meta property="og:updated_time" content="2019-05-13T00:59:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="闭包传值">
 <meta name="twitter:description" content="闭包传值swift开发中常常遇到控制之间传值的问题,在oc中我们可以用通知、代理、block来传值。在oc的block传值很方便，缺点就是只能回调传值，如果要传多个控制器只能用通知了。而在swift中我们也可以用通知、代理来传值,但那样太麻烦了，swift有个很方便的回调叫闭包(closure)。swift闭包和oc的block很类似，它可以做方法的回调也可以用来做两个界面之间的传值，也可以叫两个">
@@ -475,8 +475,16 @@ self.present(vc, animated: true, completion: nil)
         }
     }
 }
-</code></pre><p>控制器取得回调值<br>    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {</p>
+</code></pre><p>控制器取得回调值</p>
+<pre><code>func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
 
+         let cell = tableView.dequeueReusableCell(withIdentifier: LFWorkbenOneCell.identifier(), for: indexPath) as! LFWorkbenOneCell
+            cell.customeCloser = {(cellPath)-&gt;() in
+                print(&quot;第一组的 \(cellPath.row)&quot;)
+    }
+            return cell
+}
+</code></pre>
       
     </div>
     
@@ -619,7 +627,7 @@ self.present(vc, animated: true, completion: nil)
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -630,7 +638,7 @@ self.present(vc, animated: true, completion: nil)
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -641,7 +649,7 @@ self.present(vc, animated: true, completion: nil)
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -729,7 +737,7 @@ self.present(vc, animated: true, completion: nil)
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共23.5k字</span>
+  <span class="post-count">博客全站共27.8k字</span>
 </div>
         
 <div class="busuanzi-count">
