@@ -98,13 +98,13 @@
 
 
 
-<meta name="description" content="[转]苹果审核被拒，返回崩溃日志，如何解析日志前两天苹果审核被拒，返回崩溃日志，都是各种符号，看不懂，网上查询了一下，了解到崩溃日志可以用符号表解析，后来解析完之后，找到原因了，接下来记录下来，方便以后使用。 解析日志1.桌面新建一个文件夹，自行命名（crash）； 2.找到Xcode的位置，右键”显示包内容”，根据以下目录找到symbolicatecrash工具：/Applications/Xc">
+<meta name="description" content="[转]苹果审核被拒，返回崩溃日志，如何解析日志[toc] 前两天苹果审核被拒，返回崩溃日志，都是各种符号，看不懂，网上查询了一下，了解到崩溃日志可以用符号表解析，后来解析完之后，找到原因了，接下来记录下来，方便以后使用。 解析日志1.桌面新建一个文件夹，自行命名（crash）； 2.找到Xcode的位置，右键”显示包内容”，根据以下目录找到symbolicatecrash工具：/Applicati">
 <meta name="keywords" content="iOS审核">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【转】苹果审核被拒，返回崩溃日志，如何解析日志">
 <meta property="og:url" content="http://www.coldcrack.me/2019/08/27/iOS_crashLog/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="[转]苹果审核被拒，返回崩溃日志，如何解析日志前两天苹果审核被拒，返回崩溃日志，都是各种符号，看不懂，网上查询了一下，了解到崩溃日志可以用符号表解析，后来解析完之后，找到原因了，接下来记录下来，方便以后使用。 解析日志1.桌面新建一个文件夹，自行命名（crash）； 2.找到Xcode的位置，右键”显示包内容”，根据以下目录找到symbolicatecrash工具：/Applications/Xc">
+<meta property="og:description" content="[转]苹果审核被拒，返回崩溃日志，如何解析日志[toc] 前两天苹果审核被拒，返回崩溃日志，都是各种符号，看不懂，网上查询了一下，了解到崩溃日志可以用符号表解析，后来解析完之后，找到原因了，接下来记录下来，方便以后使用。 解析日志1.桌面新建一个文件夹，自行命名（crash）； 2.找到Xcode的位置，右键”显示包内容”，根据以下目录找到symbolicatecrash工具：/Applicati">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/2412819-69fa73cf9340d0de..png">
 <meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/2412819-e53fbfa2047fded8..png">
@@ -112,10 +112,10 @@
 <meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/2412819-35a799d705cd047f..png">
 <meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/2412819-c27eb7fd383c6b11..png">
 <meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/2412819-be0a3c93372cba0c..png">
-<meta property="og:updated_time" content="2019-08-27T08:49:58.820Z">
+<meta property="og:updated_time" content="2019-09-26T09:58:29.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【转】苹果审核被拒，返回崩溃日志，如何解析日志">
-<meta name="twitter:description" content="[转]苹果审核被拒，返回崩溃日志，如何解析日志前两天苹果审核被拒，返回崩溃日志，都是各种符号，看不懂，网上查询了一下，了解到崩溃日志可以用符号表解析，后来解析完之后，找到原因了，接下来记录下来，方便以后使用。 解析日志1.桌面新建一个文件夹，自行命名（crash）； 2.找到Xcode的位置，右键”显示包内容”，根据以下目录找到symbolicatecrash工具：/Applications/Xc">
+<meta name="twitter:description" content="[转]苹果审核被拒，返回崩溃日志，如何解析日志[toc] 前两天苹果审核被拒，返回崩溃日志，都是各种符号，看不懂，网上查询了一下，了解到崩溃日志可以用符号表解析，后来解析完之后，找到原因了，接下来记录下来，方便以后使用。 解析日志1.桌面新建一个文件夹，自行命名（crash）； 2.找到Xcode的位置，右键”显示包内容”，根据以下目录找到symbolicatecrash工具：/Applicati">
 <meta name="twitter:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/2412819-69fa73cf9340d0de..png">
 
 
@@ -427,7 +427,8 @@
       
 
       
-        <h1 id="转-苹果审核被拒，返回崩溃日志，如何解析日志"><a href="#转-苹果审核被拒，返回崩溃日志，如何解析日志" class="headerlink" title="[转]苹果审核被拒，返回崩溃日志，如何解析日志"></a>[转]苹果审核被拒，返回崩溃日志，如何解析日志</h1><p>前两天苹果审核被拒，返回崩溃日志，都是各种符号，看不懂，网上查询了一下，了解到崩溃日志可以用符号表解析，后来解析完之后，找到原因了，接下来记录下来，方便以后使用。</p>
+        <h1 id="转-苹果审核被拒，返回崩溃日志，如何解析日志"><a href="#转-苹果审核被拒，返回崩溃日志，如何解析日志" class="headerlink" title="[转]苹果审核被拒，返回崩溃日志，如何解析日志"></a>[转]苹果审核被拒，返回崩溃日志，如何解析日志</h1><p>[toc]</p>
+<p>前两天苹果审核被拒，返回崩溃日志，都是各种符号，看不懂，网上查询了一下，了解到崩溃日志可以用符号表解析，后来解析完之后，找到原因了，接下来记录下来，方便以后使用。</p>
 <h2 id="解析日志"><a href="#解析日志" class="headerlink" title="解析日志"></a>解析日志</h2><p>1.桌面新建一个文件夹，自行命名（crash）；</p>
 <p>2.找到Xcode的位置，右键”显示包内容”，根据以下目录找到<code>symbolicatecrash</code>工具：<code>/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash</code>,并拷贝出来，放到刚才创建的（crash）文件夹中；<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/2412819-69fa73cf9340d0de..png" alt="2412819-69fa73cf9340d0de."></p>
 <p>3.把苹果审核返回的崩溃日志下载，也放<br>到刚才创建的crash文件夹中；</p>
@@ -696,7 +697,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共30.4k字</span>
+  <span class="post-count">博客全站共31k字</span>
 </div>
         
 <div class="busuanzi-count">

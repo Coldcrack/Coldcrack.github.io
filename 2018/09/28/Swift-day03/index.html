@@ -98,19 +98,19 @@
 
 
 
-<meta name="description" content="Swift学习之路-03swift循环引用的产生闭包对self引用 self对闭包引用 接触循环引用  需要打断链条方法1：OC 的方式细节1 var,weak   只能修饰 var 不能修饰  let&amp;apos;weak&amp;apos; must be a mutable variable, because it may change at runtime weak 可能会被在运行时被修改  -&amp;g">
+<meta name="description" content="Swift学习之路-03[toc] swift循环引用的产生闭包对self引用 self对闭包引用 接触循环引用  需要打断链条方法1：OC 的方式细节1 var,weak   只能修饰 var 不能修饰  let&amp;apos;weak&amp;apos; must be a mutable variable, because it may change at runtime weak 可能会被在运行时被修">
 <meta name="keywords" content="Swift">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift学习之路-03">
 <meta property="og:url" content="http://www.coldcrack.me/2018/09/28/Swift-day03/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="Swift学习之路-03swift循环引用的产生闭包对self引用 self对闭包引用 接触循环引用  需要打断链条方法1：OC 的方式细节1 var,weak   只能修饰 var 不能修饰  let&amp;apos;weak&amp;apos; must be a mutable variable, because it may change at runtime weak 可能会被在运行时被修改  -&amp;g">
+<meta property="og:description" content="Swift学习之路-03[toc] swift循环引用的产生闭包对self引用 self对闭包引用 接触循环引用  需要打断链条方法1：OC 的方式细节1 var,weak   只能修饰 var 不能修饰  let&amp;apos;weak&amp;apos; must be a mutable variable, because it may change at runtime weak 可能会被在运行时被修">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/9ABE0801AD055D96BEF933EDD25B1BE5.png">
-<meta property="og:updated_time" content="2018-12-10T07:40:41.000Z">
+<meta property="og:updated_time" content="2019-09-26T10:14:12.497Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift学习之路-03">
-<meta name="twitter:description" content="Swift学习之路-03swift循环引用的产生闭包对self引用 self对闭包引用 接触循环引用  需要打断链条方法1：OC 的方式细节1 var,weak   只能修饰 var 不能修饰  let&amp;apos;weak&amp;apos; must be a mutable variable, because it may change at runtime weak 可能会被在运行时被修改  -&amp;g">
+<meta name="twitter:description" content="Swift学习之路-03[toc] swift循环引用的产生闭包对self引用 self对闭包引用 接触循环引用  需要打断链条方法1：OC 的方式细节1 var,weak   只能修饰 var 不能修饰  let&amp;apos;weak&amp;apos; must be a mutable variable, because it may change at runtime weak 可能会被在运行时被修">
 <meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/9ABE0801AD055D96BEF933EDD25B1BE5.png">
 
 
@@ -422,7 +422,8 @@
       
 
       
-        <h1 id="Swift学习之路-03"><a href="#Swift学习之路-03" class="headerlink" title="Swift学习之路-03"></a>Swift学习之路-03</h1><h2 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h2><h3 id="循环引用的产生"><a href="#循环引用的产生" class="headerlink" title="循环引用的产生"></a>循环引用的产生</h3><p>闭包对self引用 self对闭包引用</p>
+        <h1 id="Swift学习之路-03"><a href="#Swift学习之路-03" class="headerlink" title="Swift学习之路-03"></a>Swift学习之路-03</h1><p>[toc]</p>
+<h2 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h2><h3 id="循环引用的产生"><a href="#循环引用的产生" class="headerlink" title="循环引用的产生"></a>循环引用的产生</h3><p>闭包对self引用 self对闭包引用</p>
 <h3 id="接触循环引用-需要打断链条"><a href="#接触循环引用-需要打断链条" class="headerlink" title="接触循环引用  需要打断链条"></a>接触循环引用  需要打断链条</h3><h4 id="方法1：OC-的方式"><a href="#方法1：OC-的方式" class="headerlink" title="方法1：OC 的方式"></a>方法1：OC 的方式</h4><h5 id="细节1-var-weak-只能修饰-var-不能修饰-let"><a href="#细节1-var-weak-只能修饰-var-不能修饰-let" class="headerlink" title="细节1 var,weak   只能修饰 var 不能修饰  let"></a>细节1 var,weak   只能修饰 var 不能修饰  let</h5><pre><code>&apos;weak&apos; must be a mutable variable, because it may change at runtime
 </code></pre><p>weak 可能会被在运行时被修改  -&gt;指向的对象一旦被释放  会被自动设置为 nil  </p>
 <h5 id="细节2"><a href="#细节2" class="headerlink" title="细节2"></a>细节2</h5><p>解包有两种方式的解包<br>？ 可选解包 — 如果 self  已经被释放，不会向对象发送 getter 的消息，更加安全<br>！ 强行解包  — 如果 self 已经被释放，强行解包会导致崩溃<br> weakSelf?.view - 只是单纯的发送消息，没有计算<br> 强行解包,应为需要计算，可选项不能直接参与到计算！</p>
@@ -707,7 +708,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共30.4k字</span>
+  <span class="post-count">博客全站共31k字</span>
 </div>
         
 <div class="busuanzi-count">

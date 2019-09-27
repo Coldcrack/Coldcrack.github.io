@@ -98,13 +98,13 @@
 
 
 
-<meta name="description" content="Mac 上远程连接VPS 搭建SS前言最近在更新github博客时，每次更新博客提交Git都很费时间，最后忍无可忍，想办法做个能加速网络的东东。网上搜罗了一下，发现个神器叫vultr，可以使用Mac基于Vultr搭建ss来加速访问网络。Vultr是一家美国的服务器厂商，这个VPS服务商是按小时收费的。这意味着，架设一台VPS的成本几乎为零。假如你不想用美国的了(这里推荐使用美国的，应为我试了5个I">
+<meta name="description" content="Mac 上远程连接VPS 搭建SS[toc] 前言最近在更新github博客时，每次更新博客提交Git都很费时间，最后忍无可忍，想办法做个能加速网络的东东。网上搜罗了一下，发现个神器叫vultr，可以使用Mac基于Vultr搭建ss来加速访问网络。Vultr是一家美国的服务器厂商，这个VPS服务商是按小时收费的。这意味着，架设一台VPS的成本几乎为零。假如你不想用美国的了(这里推荐使用美国的，应为">
 <meta name="keywords" content="Mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac 上远程连接VPS 搭建SS">
 <meta property="og:url" content="http://www.coldcrack.me/2018/08/02/Mac_VPS_SS/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="Mac 上远程连接VPS 搭建SS前言最近在更新github博客时，每次更新博客提交Git都很费时间，最后忍无可忍，想办法做个能加速网络的东东。网上搜罗了一下，发现个神器叫vultr，可以使用Mac基于Vultr搭建ss来加速访问网络。Vultr是一家美国的服务器厂商，这个VPS服务商是按小时收费的。这意味着，架设一台VPS的成本几乎为零。假如你不想用美国的了(这里推荐使用美国的，应为我试了5个I">
+<meta property="og:description" content="Mac 上远程连接VPS 搭建SS[toc] 前言最近在更新github博客时，每次更新博客提交Git都很费时间，最后忍无可忍，想办法做个能加速网络的东东。网上搜罗了一下，发现个神器叫vultr，可以使用Mac基于Vultr搭建ss来加速访问网络。Vultr是一家美国的服务器厂商，这个VPS服务商是按小时收费的。这意味着，架设一台VPS的成本几乎为零。假如你不想用美国的了(这里推荐使用美国的，应为">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/4dzzzfv135.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/h8rcjs3np8.png">
@@ -124,10 +124,10 @@
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/7jzhlebxp7.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/r0ukt9znnn.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/ubezq8xdjq.png">
-<meta property="og:updated_time" content="2018-12-10T07:25:19.000Z">
+<meta property="og:updated_time" content="2019-09-26T10:12:10.160Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac 上远程连接VPS 搭建SS">
-<meta name="twitter:description" content="Mac 上远程连接VPS 搭建SS前言最近在更新github博客时，每次更新博客提交Git都很费时间，最后忍无可忍，想办法做个能加速网络的东东。网上搜罗了一下，发现个神器叫vultr，可以使用Mac基于Vultr搭建ss来加速访问网络。Vultr是一家美国的服务器厂商，这个VPS服务商是按小时收费的。这意味着，架设一台VPS的成本几乎为零。假如你不想用美国的了(这里推荐使用美国的，应为我试了5个I">
+<meta name="twitter:description" content="Mac 上远程连接VPS 搭建SS[toc] 前言最近在更新github博客时，每次更新博客提交Git都很费时间，最后忍无可忍，想办法做个能加速网络的东东。网上搜罗了一下，发现个神器叫vultr，可以使用Mac基于Vultr搭建ss来加速访问网络。Vultr是一家美国的服务器厂商，这个VPS服务商是按小时收费的。这意味着，架设一台VPS的成本几乎为零。假如你不想用美国的了(这里推荐使用美国的，应为">
 <meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/4dzzzfv135.png">
 
 
@@ -439,7 +439,8 @@
       
 
       
-        <h1 id="Mac-上远程连接VPS-搭建SS"><a href="#Mac-上远程连接VPS-搭建SS" class="headerlink" title="Mac 上远程连接VPS 搭建SS"></a>Mac 上远程连接VPS 搭建SS</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在更新github博客时，每次更新博客提交Git都很费时间，最后忍无可忍，想办法做个能加速网络的东东。网上搜罗了一下，发现个神器叫vultr，可以使用Mac基于Vultr搭建ss来加速访问网络。<br>Vultr是一家美国的服务器厂商，这个VPS服务商是按小时收费的。这意味着，架设一台VPS的成本几乎为零。假如你不想用美国的了(这里推荐使用美国的，应为我试了5个IP，只有美国NL的IP可以玩，2333)，关机销毁然后再换到全球任何一个地区无压力。新手入门强烈推荐。</p>
+        <h1 id="Mac-上远程连接VPS-搭建SS"><a href="#Mac-上远程连接VPS-搭建SS" class="headerlink" title="Mac 上远程连接VPS 搭建SS"></a>Mac 上远程连接VPS 搭建SS</h1><p>[toc]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在更新github博客时，每次更新博客提交Git都很费时间，最后忍无可忍，想办法做个能加速网络的东东。网上搜罗了一下，发现个神器叫vultr，可以使用Mac基于Vultr搭建ss来加速访问网络。<br>Vultr是一家美国的服务器厂商，这个VPS服务商是按小时收费的。这意味着，架设一台VPS的成本几乎为零。假如你不想用美国的了(这里推荐使用美国的，应为我试了5个IP，只有美国NL的IP可以玩，2333)，关机销毁然后再换到全球任何一个地区无压力。新手入门强烈推荐。</p>
 <h3 id="1-点击首页打开注册，点击页面右上角的Create-Account注册按钮即可注册。"><a href="#1-点击首页打开注册，点击页面右上角的Create-Account注册按钮即可注册。" class="headerlink" title="1). 点击首页打开注册，点击页面右上角的Create Account注册按钮即可注册。"></a>1). <a href="https://www.vultr.com/" target="_blank" rel="noopener">点击首页打开注册</a>，点击页面右上角的Create Account注册按钮即可注册。</h3><h3 id="2-注册好账号并登陆进去，点击加号开启VPS"><a href="#2-注册好账号并登陆进去，点击加号开启VPS" class="headerlink" title="2).注册好账号并登陆进去，点击加号开启VPS"></a>2).注册好账号并登陆进去，点击加号开启VPS</h3><p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/4dzzzfv135.png" alt="4dzzzfv135"></p>
 <h3 id="3-选择一个你喜欢的服务器地区，推荐日本或者美国。"><a href="#3-选择一个你喜欢的服务器地区，推荐日本或者美国。" class="headerlink" title="3).选择一个你喜欢的服务器地区，推荐日本或者美国。"></a>3).选择一个你喜欢的服务器地区，推荐日本或者美国。</h3><p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/h8rcjs3np8.png" alt="h8rcjs3np8"></p>
 <h3 id="4-选择服务器系统，推荐选择Ubuntu-16-04。因为我们mac-vultr搭建ss的教程是基于Ubuntu系统开始的。"><a href="#4-选择服务器系统，推荐选择Ubuntu-16-04。因为我们mac-vultr搭建ss的教程是基于Ubuntu系统开始的。" class="headerlink" title="4).选择服务器系统，推荐选择Ubuntu 16.04。因为我们mac vultr搭建ss的教程是基于Ubuntu系统开始的。"></a>4).选择服务器系统，推荐选择Ubuntu 16.04。因为我们mac vultr搭建ss的教程是基于Ubuntu系统开始的。</h3><p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/2r8wpbc1br.png" alt="2r8wpbc1b"></p>
@@ -730,7 +731,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共30.4k字</span>
+  <span class="post-count">博客全站共31k字</span>
 </div>
         
 <div class="busuanzi-count">

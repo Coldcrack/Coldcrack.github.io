@@ -98,13 +98,13 @@
 
 
 
-<meta name="description" content="Hexo Next主题集成Gittalk前言本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见demo 配置GittalkRegister Application在GitHub注册新应用登录GitHub-&amp;gt;点击头像-&amp;gt;Setting-&amp;gt;Deve">
+<meta name="description" content="Hexo Next主题集成Gittalk[toc] 前言本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见demo 配置GittalkRegister Application在GitHub注册新应用登录GitHub-&amp;gt;点击头像-&amp;gt;Setting-&amp;g">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo Next主题集成Gittalk">
 <meta property="og:url" content="http://www.coldcrack.me/2018/07/18/Next_Gittalk/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="Hexo Next主题集成Gittalk前言本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见demo 配置GittalkRegister Application在GitHub注册新应用登录GitHub-&amp;gt;点击头像-&amp;gt;Setting-&amp;gt;Deve">
+<meta property="og:description" content="Hexo Next主题集成Gittalk[toc] 前言本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见demo 配置GittalkRegister Application在GitHub注册新应用登录GitHub-&amp;gt;点击头像-&amp;gt;Setting-&amp;g">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/B2E512E2-B938-41EE-B619-03C974F55231.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/7CF4B19B-16DA-40B7-AECE-79179033A54C.png">
@@ -114,10 +114,10 @@
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/E510EF3AA8146A41FA4D490FBE9F8045.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/AA639D24515DF1799BFC5DE1027C0A9C.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/F86EABB8-8AC8-4298-9B56-C117E8947E12.png">
-<meta property="og:updated_time" content="2018-12-10T07:39:11.000Z">
+<meta property="og:updated_time" content="2019-09-26T10:13:41.202Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Next主题集成Gittalk">
-<meta name="twitter:description" content="Hexo Next主题集成Gittalk前言本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见demo 配置GittalkRegister Application在GitHub注册新应用登录GitHub-&amp;gt;点击头像-&amp;gt;Setting-&amp;gt;Deve">
+<meta name="twitter:description" content="Hexo Next主题集成Gittalk[toc] 前言本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见demo 配置GittalkRegister Application在GitHub注册新应用登录GitHub-&amp;gt;点击头像-&amp;gt;Setting-&amp;g">
 <meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/B2E512E2-B938-41EE-B619-03C974F55231.png">
 
 
@@ -429,7 +429,8 @@
       
 
       
-        <h1 id="Hexo-Next主题集成Gittalk"><a href="#Hexo-Next主题集成Gittalk" class="headerlink" title="Hexo Next主题集成Gittalk"></a>Hexo Next主题集成Gittalk</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见<a href="https://gitalk.github.io" target="_blank" rel="noopener">demo</a></p>
+        <h1 id="Hexo-Next主题集成Gittalk"><a href="#Hexo-Next主题集成Gittalk" class="headerlink" title="Hexo Next主题集成Gittalk"></a>Hexo Next主题集成Gittalk</h1><p>[toc]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本片讲述给Next主题集成Gittalk，及各种采坑。Gittalk据我了解是基于GitHub Issue开发的评论插件，它是把GitHub 的issue集成在next博客中的。具体详情见<a href="https://gitalk.github.io" target="_blank" rel="noopener">demo</a></p>
 <h2 id="配置Gittalk"><a href="#配置Gittalk" class="headerlink" title="配置Gittalk"></a>配置Gittalk</h2><h3 id="Register-Application"><a href="#Register-Application" class="headerlink" title="Register Application"></a>Register Application</h3><p>在GitHub注册新应用<br>登录GitHub-&gt;点击头像-&gt;Setting-&gt;Developer settings-&gt;OAuth Apps-&gt;New OAuth App<br>顺序如图<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/B2E512E2-B938-41EE-B619-03C974F55231.png" alt="B2E512E2-B938-41EE-B619-03C974F55231"><br>图(1)<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/7CF4B19B-16DA-40B7-AECE-79179033A54C.png" alt="7CF4B19B-16DA-40B7-AECE-79179033A54"><br>图(2)<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/974DB528-DC1E-411D-AFEE-51ED3488BAA6.png" alt="974DB528-DC1E-411D-AFEE-51ED3488BAA6"><br>Application name： # 应用名称，随意<br>Homepage URL： # 网站URL，如<code>https://coldcrack.github.io</code><br>Application description # 描述，随意<br>Authorization callback URL：# 网站URL，<code>https://coldcrack.github.io</code><br>注册完成后，页面跳转如下<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/895B2089-7F11-44EB-A539-BF9383A54C16.png" alt="895B2089-7F11-44EB-A539-BF9383A54"><br>Client ID和Client Secret在在主题配置中有用,保留。</p>
 <h3 id="gitalk-swig"><a href="#gitalk-swig" class="headerlink" title="gitalk.swig"></a>gitalk.swig</h3><p>新建<code>/layout/_third-party/comments/gitalk.swig</code>文件，并添加内容：</p>
 <pre><code>{% if page.comments && theme.gitalk.enable %}
@@ -730,7 +731,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共30.4k字</span>
+  <span class="post-count">博客全站共31k字</span>
 </div>
         
 <div class="busuanzi-count">

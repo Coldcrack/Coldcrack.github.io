@@ -98,20 +98,20 @@
 
 
 
-<meta name="description" content="Mac搭建Hexo博客及NexT主题配置优化前言之前在简书上看到一位博主小马哥Mark写的文章很好，关于在Mac上搭建Hexo博客，后来找不到了。现在自己整理一下，方便以后回忆。 首先是准备工作：要想使用Hexo和github pages搭建博客，需要以下环境：Github账号一枚，并创建一个指定名字的repoHomebrew套件管理器，主要用来安装git和node.jsGit版本管理工具node">
+<meta name="description" content="Mac搭建Hexo博客及NexT主题配置优化[toc] 前言之前在简书上看到一位博主小马哥Mark写的文章很好，关于在Mac上搭建Hexo博客，后来找不到了。现在自己整理一下，方便以后回忆。 首先是准备工作：要想使用Hexo和github pages搭建博客，需要以下环境：Github账号一枚，并创建一个指定名字的repoHomebrew套件管理器，主要用来安装git和node.jsGit版本管理">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac搭建Hexo博客及NexT主题配置优化">
 <meta property="og:url" content="http://www.coldcrack.me/2018/07/18/MacforHexoBlogNexTConfig/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="Mac搭建Hexo博客及NexT主题配置优化前言之前在简书上看到一位博主小马哥Mark写的文章很好，关于在Mac上搭建Hexo博客，后来找不到了。现在自己整理一下，方便以后回忆。 首先是准备工作：要想使用Hexo和github pages搭建博客，需要以下环境：Github账号一枚，并创建一个指定名字的repoHomebrew套件管理器，主要用来安装git和node.jsGit版本管理工具node">
+<meta property="og:description" content="Mac搭建Hexo博客及NexT主题配置优化[toc] 前言之前在简书上看到一位博主小马哥Mark写的文章很好，关于在Mac上搭建Hexo博客，后来找不到了。现在自己整理一下，方便以后回忆。 首先是准备工作：要想使用Hexo和github pages搭建博客，需要以下环境：Github账号一枚，并创建一个指定名字的repoHomebrew套件管理器，主要用来安装git和node.jsGit版本管理">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/EA56FC38-9DE9-423C-88DF-BF36687164B8.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/2ED169BC-1AE8-4AE3-95C7-AD17E2A5AAFF.png">
-<meta property="og:updated_time" content="2018-12-10T07:27:13.000Z">
+<meta property="og:updated_time" content="2019-09-26T10:12:27.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac搭建Hexo博客及NexT主题配置优化">
-<meta name="twitter:description" content="Mac搭建Hexo博客及NexT主题配置优化前言之前在简书上看到一位博主小马哥Mark写的文章很好，关于在Mac上搭建Hexo博客，后来找不到了。现在自己整理一下，方便以后回忆。 首先是准备工作：要想使用Hexo和github pages搭建博客，需要以下环境：Github账号一枚，并创建一个指定名字的repoHomebrew套件管理器，主要用来安装git和node.jsGit版本管理工具node">
+<meta name="twitter:description" content="Mac搭建Hexo博客及NexT主题配置优化[toc] 前言之前在简书上看到一位博主小马哥Mark写的文章很好，关于在Mac上搭建Hexo博客，后来找不到了。现在自己整理一下，方便以后回忆。 首先是准备工作：要想使用Hexo和github pages搭建博客，需要以下环境：Github账号一枚，并创建一个指定名字的repoHomebrew套件管理器，主要用来安装git和node.jsGit版本管理">
 <meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/EA56FC38-9DE9-423C-88DF-BF36687164B8.png">
 
 
@@ -423,7 +423,8 @@
       
 
       
-        <h1 id="Mac搭建Hexo博客及NexT主题配置优化"><a href="#Mac搭建Hexo博客及NexT主题配置优化" class="headerlink" title="Mac搭建Hexo博客及NexT主题配置优化"></a>Mac搭建Hexo博客及NexT主题配置优化</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前在简书上看到一位博主<a href="https://www.jianshu.com/u/a5a6afe1c044" target="_blank" rel="noopener">小马哥Mark</a>写的文章很好，关于在Mac上搭建Hexo博客，后来找不到了。现在自己整理一下，方便以后回忆。</p>
+        <h1 id="Mac搭建Hexo博客及NexT主题配置优化"><a href="#Mac搭建Hexo博客及NexT主题配置优化" class="headerlink" title="Mac搭建Hexo博客及NexT主题配置优化"></a>Mac搭建Hexo博客及NexT主题配置优化</h1><p>[toc]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前在简书上看到一位博主<a href="https://www.jianshu.com/u/a5a6afe1c044" target="_blank" rel="noopener">小马哥Mark</a>写的文章很好，关于在Mac上搭建Hexo博客，后来找不到了。现在自己整理一下，方便以后回忆。</p>
 <h3 id="首先是准备工作："><a href="#首先是准备工作：" class="headerlink" title="首先是准备工作："></a>首先是准备工作：</h3><p>要想使用Hexo和github pages搭建博客，需要以下环境：<br>Github账号一枚，并创建一个指定名字的repo<br>Homebrew套件管理器，主要用来安装git和node.js<br>Git版本管理工具<br>node.js<br>配置SSH key（推荐使用）<br>安装Hexo<br>同步Hexo博客到github<br>NexT主题配置及优化（如果你喜欢别的主题，请忽略）</p>
 <h2 id="注册Github账号"><a href="#注册Github账号" class="headerlink" title="注册Github账号"></a>注册Github账号</h2><p>上官网注册就可以了，这里不做细说，然后点击 <code>New repository</code></p>
 <p><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/EA56FC38-9DE9-423C-88DF-BF36687164B8.png" alt="EA56FC38-9DE9-423C-88DF-BF36687164B8"></p>
@@ -716,7 +717,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共30.4k字</span>
+  <span class="post-count">博客全站共31k字</span>
 </div>
         
 <div class="busuanzi-count">

@@ -98,22 +98,22 @@
 
 
 
-<meta name="description" content="iOS 数据埋点前言一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？ 首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。 那么我们怎么实现数据埋点呢？网上有很多数据埋点的SDK，如友">
+<meta name="description" content="iOS 数据埋点[toc] 前言一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？ 首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。 那么我们怎么实现数据埋点呢？网上有很多数据埋点的">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS 数据埋点">
 <meta property="og:url" content="http://www.coldcrack.me/2018/12/10/iOS_MTJ/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="iOS 数据埋点前言一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？ 首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。 那么我们怎么实现数据埋点呢？网上有很多数据埋点的SDK，如友">
+<meta property="og:description" content="iOS 数据埋点[toc] 前言一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？ 首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。 那么我们怎么实现数据埋点呢？网上有很多数据埋点的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152354449.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152451383.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/A0F0740B-8870-4467-8440-8179DEE7D2F3.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/0119D617-3D8D-4165-AF53-B1DFB3F23C76.png">
-<meta property="og:updated_time" content="2018-12-10T06:42:14.000Z">
+<meta property="og:updated_time" content="2019-09-26T10:00:11.932Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 数据埋点">
-<meta name="twitter:description" content="iOS 数据埋点前言一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？ 首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。 那么我们怎么实现数据埋点呢？网上有很多数据埋点的SDK，如友">
+<meta name="twitter:description" content="iOS 数据埋点[toc] 前言一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？ 首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。 那么我们怎么实现数据埋点呢？网上有很多数据埋点的">
 <meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439152354449.png">
 
 
@@ -425,7 +425,8 @@
       
 
       
-        <h1 id="iOS-数据埋点"><a href="#iOS-数据埋点" class="headerlink" title="iOS 数据埋点"></a>iOS 数据埋点</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？</p>
+        <h1 id="iOS-数据埋点"><a href="#iOS-数据埋点" class="headerlink" title="iOS 数据埋点"></a>iOS 数据埋点</h1><p>[toc]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一般好的App为了后期版本迭代，会根据用户需求做进一步的优化，保留或是升级好的一部分，优化或者是移除一些无用的功能。那么我们怎么来知道哪些功能用户喜欢，哪些功能使用少呢？</p>
 <p>首先通过产品定位及目标来确定自己需要哪些数据，其次通过在产品各个流程环节中设置数据埋点，最后，当用户使用App时，后台就能源源不断地接收到数据了。</p>
 <p>那么我们怎么实现数据埋点呢？<br>网上有很多数据埋点的SDK，如友盟、极光、腾讯的MTA等。下面我将举例说明一下极光的埋点统计。</p>
 <h2 id="极光统计-iOS-SDK-集成"><a href="#极光统计-iOS-SDK-集成" class="headerlink" title="极光统计 iOS SDK 集成"></a>极光统计 iOS SDK 集成</h2><h3 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h3><hr>
@@ -842,7 +843,7 @@ browse_duration
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共30.4k字</span>
+  <span class="post-count">博客全站共31k字</span>
 </div>
         
 <div class="busuanzi-count">

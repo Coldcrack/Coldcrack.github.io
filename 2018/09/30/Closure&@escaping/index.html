@@ -98,21 +98,21 @@
 
 
 
-<meta name="description" content="逃逸闭包（@escaping）和非逃逸闭包今天学习GCD时，用闭包写了个函数出现了这些问题，如图问题报错： 1.Function types cannot have argument labels; use &amp;apos;_&amp;apos; before &amp;apos;result&amp;apos; 2.Closure use of non-escaping parameter &amp;apos;comletion&amp;">
+<meta name="description" content="逃逸闭包（@escaping）和非逃逸闭包[toc] 今天学习GCD时，用闭包写了个函数出现了这些问题，如图问题报错： 1.Function types cannot have argument labels; use &amp;apos;_&amp;apos; before &amp;apos;result&amp;apos; 2.Closure use of non-escaping parameter &amp;apos;coml">
 <meta name="keywords" content="Swift">
 <meta property="og:type" content="article">
 <meta property="og:title" content="逃逸闭包（@escaping）和非逃逸闭包">
 <meta property="og:url" content="http://www.coldcrack.me/2018/09/30/Closure&@escaping/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="逃逸闭包（@escaping）和非逃逸闭包今天学习GCD时，用闭包写了个函数出现了这些问题，如图问题报错： 1.Function types cannot have argument labels; use &amp;apos;_&amp;apos; before &amp;apos;result&amp;apos; 2.Closure use of non-escaping parameter &amp;apos;comletion&amp;">
+<meta property="og:description" content="逃逸闭包（@escaping）和非逃逸闭包[toc] 今天学习GCD时，用闭包写了个函数出现了这些问题，如图问题报错： 1.Function types cannot have argument labels; use &amp;apos;_&amp;apos; before &amp;apos;result&amp;apos; 2.Closure use of non-escaping parameter &amp;apos;coml">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/1411204-b56b97c93063dbaa.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/1411204-065fc11c7ec14729.png">
-<meta property="og:updated_time" content="2018-12-10T07:14:26.000Z">
+<meta property="og:updated_time" content="2019-09-26T09:55:41.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="逃逸闭包（@escaping）和非逃逸闭包">
-<meta name="twitter:description" content="逃逸闭包（@escaping）和非逃逸闭包今天学习GCD时，用闭包写了个函数出现了这些问题，如图问题报错： 1.Function types cannot have argument labels; use &amp;apos;_&amp;apos; before &amp;apos;result&amp;apos; 2.Closure use of non-escaping parameter &amp;apos;comletion&amp;">
+<meta name="twitter:description" content="逃逸闭包（@escaping）和非逃逸闭包[toc] 今天学习GCD时，用闭包写了个函数出现了这些问题，如图问题报错： 1.Function types cannot have argument labels; use &amp;apos;_&amp;apos; before &amp;apos;result&amp;apos; 2.Closure use of non-escaping parameter &amp;apos;coml">
 <meta name="twitter:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png">
 
 
@@ -424,7 +424,8 @@
       
 
       
-        <h1 id="逃逸闭包（-escaping）和非逃逸闭包"><a href="#逃逸闭包（-escaping）和非逃逸闭包" class="headerlink" title="逃逸闭包（@escaping）和非逃逸闭包"></a>逃逸闭包（@escaping）和非逃逸闭包</h1><p>今天学习GCD时，用闭包写了个函数出现了这些问题，如图<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png" alt="6455CAF8-20E8-4F70-B585-1CF2840BD5F5"><br>问题报错：</p>
+        <h1 id="逃逸闭包（-escaping）和非逃逸闭包"><a href="#逃逸闭包（-escaping）和非逃逸闭包" class="headerlink" title="逃逸闭包（@escaping）和非逃逸闭包"></a>逃逸闭包（@escaping）和非逃逸闭包</h1><p>[toc]</p>
+<p>今天学习GCD时，用闭包写了个函数出现了这些问题，如图<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/6455CAF8-20E8-4F70-B585-1CF2840BD5F5.png" alt="6455CAF8-20E8-4F70-B585-1CF2840BD5F5"><br>问题报错：</p>
 <pre><code>1.Function types cannot have argument labels; use &apos;_&apos; before &apos;result&apos;
 2.Closure use of non-escaping parameter &apos;comletion&apos; may allow it to escape
 3.Closure use of non-escaping parameter &apos;comletion&apos; may allow it to escape
@@ -696,7 +697,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共30.4k字</span>
+  <span class="post-count">博客全站共31k字</span>
 </div>
         
 <div class="busuanzi-count">

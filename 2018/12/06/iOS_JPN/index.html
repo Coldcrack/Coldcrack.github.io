@@ -98,13 +98,13 @@
 
 
 
-<meta name="description" content="iOS 推送推送原理APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。Apple推送机制可以概括为下图 图中Provider意思为供应商，就是后台服务器。如图我们可以将消息推送分为三个阶段。 第一阶段：Java后台把要发送的消息、目的iPhone的标识打包，发给APNS。第二阶段：APNS在自身的已注册Push服务的iPho">
+<meta name="description" content="iOS 推送[toc] 推送原理APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。Apple推送机制可以概括为下图 图中Provider意思为供应商，就是后台服务器。如图我们可以将消息推送分为三个阶段。 第一阶段：Java后台把要发送的消息、目的iPhone的标识打包，发给APNS。第二阶段：APNS在自身的已注册Push服">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS 推送">
 <meta property="og:url" content="http://www.coldcrack.me/2018/12/06/iOS_JPN/index.html">
 <meta property="og:site_name" content="天寒地裂">
-<meta property="og:description" content="iOS 推送推送原理APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。Apple推送机制可以概括为下图 图中Provider意思为供应商，就是后台服务器。如图我们可以将消息推送分为三个阶段。 第一阶段：Java后台把要发送的消息、目的iPhone的标识打包，发给APNS。第二阶段：APNS在自身的已注册Push服务的iPho">
+<meta property="og:description" content="iOS 推送[toc] 推送原理APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。Apple推送机制可以概括为下图 图中Provider意思为供应商，就是后台服务器。如图我们可以将消息推送分为三个阶段。 第一阶段：Java后台把要发送的消息、目的iPhone的标识打包，发给APNS。第二阶段：APNS在自身的已注册Push服">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438865253253.jpg">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438866721811.jpg">
@@ -121,10 +121,10 @@
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439051694762.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439052059875.png">
 <meta property="og:image" content="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15439057698937.jpg">
-<meta property="og:updated_time" content="2018-12-10T06:41:27.000Z">
+<meta property="og:updated_time" content="2019-09-26T09:59:27.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 推送">
-<meta name="twitter:description" content="iOS 推送推送原理APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。Apple推送机制可以概括为下图 图中Provider意思为供应商，就是后台服务器。如图我们可以将消息推送分为三个阶段。 第一阶段：Java后台把要发送的消息、目的iPhone的标识打包，发给APNS。第二阶段：APNS在自身的已注册Push服务的iPho">
+<meta name="twitter:description" content="iOS 推送[toc] 推送原理APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。Apple推送机制可以概括为下图 图中Provider意思为供应商，就是后台服务器。如图我们可以将消息推送分为三个阶段。 第一阶段：Java后台把要发送的消息、目的iPhone的标识打包，发给APNS。第二阶段：APNS在自身的已注册Push服">
 <meta name="twitter:image" content="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438865253253.jpg">
 
 
@@ -436,7 +436,8 @@
       
 
       
-        <h1 id="iOS-推送"><a href="#iOS-推送" class="headerlink" title="iOS 推送"></a>iOS 推送</h1><h2 id="推送原理"><a href="#推送原理" class="headerlink" title="推送原理"></a>推送原理</h2><p>APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。<br>Apple推送机制可以概括为下图<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438865253253.jpg" alt=""></p>
+        <h1 id="iOS-推送"><a href="#iOS-推送" class="headerlink" title="iOS 推送"></a>iOS 推送</h1><p>[toc]</p>
+<h2 id="推送原理"><a href="#推送原理" class="headerlink" title="推送原理"></a>推送原理</h2><p>APNs全拼是Apple Push Notification Service（Apple Push服务器），是苹果的服务器。<br>Apple推送机制可以概括为下图<br><img src="https://coldcrack.oss-cn-shanghai.aliyuncs.com/15438865253253.jpg" alt=""></p>
 <p>图中Provider意思为供应商，就是后台服务器。<br>如图我们可以将消息推送分为三个阶段。</p>
 <p>第一阶段：Java后台把要发送的消息、目的iPhone的标识打包，发给APNS。<br>第二阶段：APNS在自身的已注册Push服务的iPhone列表中，查找有相应标识的iPhone，并把消息发到iPhone。<br>第三阶段：iPhone把发来的消息传递给相应的应用程序， 并且按照设定弹出Push通知。<br><img src="http://coldcrack.oss-cn-shanghai.aliyuncs.com/15438866721811.jpg" alt=""></p>
 <p><code>Provisioning profile</code> 配置文件<br><code>Device Token</code> 设备Token<br><code>App ID</code> 程序ID</p>
@@ -759,7 +760,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共30.4k字</span>
+  <span class="post-count">博客全站共31k字</span>
 </div>
         
 <div class="busuanzi-count">
